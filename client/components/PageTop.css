@@ -1,0 +1,45 @@
+.page_top{
+    width: 100%;
+    height: 250px;
+    /* background-image: url('/images/fingerfoods/فینگرفود تشریفاتی فاوو ایونت.webp'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.page_top_overlay{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.705) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page_top_container{
+    width: 88%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width:1200px;
+}
+.page_top_container h1{
+    color: #fff;
+    font-size: 25px;
+}
+.breadcrumb{
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.breadcrumb li a {
+    text-decoration: none;
+    color: white;
+}
+.active_breadcrumb{
+    color: #a6a182!important;
+}

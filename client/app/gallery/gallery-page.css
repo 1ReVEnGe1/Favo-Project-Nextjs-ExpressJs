@@ -1,0 +1,21 @@
+.photo-gallery-container{
+    max-width:1200px;
+    margin: 50px auto;
+    height:auto;
+}
+.photo-gallery-title{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom:20px;
+    padding:10px 0;
+}
+
+.photo-gallery{
+    max-width:1200px;
+    margin:0 auto;
+}

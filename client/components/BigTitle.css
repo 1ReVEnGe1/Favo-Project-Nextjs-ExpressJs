@@ -1,0 +1,21 @@
+.big-title {
+    width:90%;
+    margin:0 auto;
+    max-width:1200px;
+    position:relative;
+    height:200px
+}
+.big-title span {
+    font-size: 200px;
+    color: #363636;
+    letter-spacing: 15px;
+    font-family: 'Calibri';
+    z-index: 1;
+    font-weight: bold;
+    text-align:center;
+    display:block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top:0;
+}

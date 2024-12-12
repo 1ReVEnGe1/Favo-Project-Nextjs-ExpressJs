@@ -1,0 +1,24 @@
+.services-home {
+    background-color:#101218;
+    padding-bottom:50px;
+}
+.services-home h2 {
+    font-family: 'RokhFaBold';
+}
+.services-home h3 {
+    font-family: 'RokhFaBold';
+}
+.services-home-head p {
+    max-width:650px;
+    margin: 30px auto;
+    
+}
+.services-home hr {
+    width: 40px;
+    border: 2px solid #a6a182;
+    margin: 30px auto 0;
+}
+.services-home-content{
+    max-width:1200px;
+    margin:0 auto;
+}

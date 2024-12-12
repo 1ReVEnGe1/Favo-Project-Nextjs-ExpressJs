@@ -1,0 +1,26 @@
+.card-services{
+    width:300px;
+}
+
+.card-services-container{
+    width:100%;
+    height:250px;
+    position:relative
+}
+.card-services-container img{
+    object-fit:cover;
+}
+.bold-card{
+    height:340px;
+}
+.bold-card2{
+    width:400px;
+}
+.bold-card2 h3{
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.card-services img {
+    width:100%;
+    height:100%;
+}

@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family:'KalameThin';
+    src:url('/fonts/KalamehWebFaNum-Thin.woff') format('woff'),
+        url('/fonts/KalamehWebFaNum-Thin.woff2') format('woff2')
+}
+@font-face {
+    font-family:'KalameLight';
+    src:url('/fonts/KalamehWebFaNum-Light.woff') format('woff'),
+        url('/fonts/KalamehWebFaNum-Light.woff2') format('woff2')
+}
+@font-face {
+    font-family:'kalameExtraLight';
+    src:url('/fonts/KalamehWebFaNum-ExtraLight.woff') format('woff'),
+        url('/fonts/KalamehWebFaNum-ExtraLight.woff2') format('woff2')
+}
+@font-face {
+    font-family:'kalameMedium';
+    src:url('/fonts/KalamehWebFaNum-Medium.woff') format('woff'),
+        url('/fonts/KalamehWebFaNum-Medium.woff2') format('woff2')
+}
+@font-face {
+    font-family:'kalameBlack';
+    src:url('/fonts/KalamehWebFaNum-Black.woff') format('woff'),
+        url('/fonts/KalamehWebFaNum-Black.woff2') format('woff2')
+}
+/* ----Dana---- */
+@font-face {
+    font-family:'DanaFa';
+    src:url('/fonts/Dana-Regular.woff') format('woff'),
+        url('/fonts/Dana-Regular.woff2') format('woff2')
+}
+@font-face {
+    font-family:'DanaFaMedium';
+    src:url('/fonts/Dana-Medium.woff') format('woff'),
+        url('/fonts/Dana-Medium.woff2') format('woff2')
+}
+/* ----Rokh---- */
+@font-face {
+    font-family:'RokhFa';
+    src:url('/fonts/Rokh-Normal.woff') format('woff'),
+    url('/fonts/Rokh-Normal.woff2') format('woff2'),
+    url('/fonts/Rokh-Normal.eot') format('eot')
+}
+@font-face {
+    font-family:'RokhFaThin';
+    src:url('/fonts/Rokh-Thin.woff') format('woff'),
+        url('/fonts/Rokh-Thin.woff2') format('woff2'),
+        url('/fonts/Rokh-Thin.eot') format('eot')
+}
+@font-face {
+    font-family:'RokhFaSemiBold';
+    src:url('/fonts/Rokh-SemiBold.woff') format('woff'),
+        url('/fonts/Rokh-SemiBold.woff2') format('woff2')
+        url('/fonts/Rokh-SemiBold.eot') format('eot')
+}
+
+@font-face {
+    font-family:'RokhFaBold';
+    src:url('/fonts/Rokh-Bold.woff') format('woff'),
+        url('/fonts/Rokh-Bold.woff2') format('woff2')
+        url('/fonts/Rokh-Bold.eot') format('eot')
+}
+
+body{
+    /* background-color:#1B1B1B; */
+    background-color:#0f0f0f;
+    font-family:'DanaFa'
+}
+/* p{
+    color:rgb(241, 245, 249)
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #fff;
+} */
+
+html{
+    scroll-behavior: smooth;
+}

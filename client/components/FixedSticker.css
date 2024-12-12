@@ -1,0 +1,55 @@
+.fixed-sticker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:var(--gray); */
+    width: fit-content;
+    height: auto;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.fixed-sticker button {
+    background-color:#5e4642;
+    color:#fff;
+    font-size:13px;
+    padding:0.6em 0.6em;
+    border-radius:10px;
+}
+
+.fixed-sticker-numbers{
+    width: 100%;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: height 0.3s ease-out;
+    -webkit-transition: height 0.3s ease-out;
+    -moz-transition: height 0.3s ease-out;
+    -ms-transition: height 0.3s ease-out;
+    -o-transition: height 0.3s ease-out;
+    overflow: hidden;
+}
+.fixed-sticker-numbers a{
+    color: #fff;
+    text-decoration: none;
+}
+.fixed-sticker-active{
+    height: 100px!important;
+    background-color:#625f4e;
+}
+.fixed-sticker-active-btn{
+  border-radius:10px 10px 0 0!important;
+}
+.fixed-sticker-active-btn2{
+  border-radius:0 0 10px 10px!important;
+}

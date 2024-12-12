@@ -1,0 +1,24 @@
+.cards{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    max-width:1200px;
+}
+
+.card {
+    width:30%;
+    height:200px;
+}
+.card h2{
+    color:white;
+    font-size:20px;
+    font-family:'DanaFaMedium';
+    margin-bottom:25px;
+}
+.card p{
+    color:#dcdccb;
+    text-align:justify;
+    font-size:14px
+}

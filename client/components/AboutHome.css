@@ -1,0 +1,11 @@
+.about-home{
+    margin: 0 auto;
+    max-width:1200px;
+    width:90%;
+}
+.about-home h2 {
+    font-family: 'RokhFaBold';
+}
+.about-home p {
+    font-size: 15px;
+}

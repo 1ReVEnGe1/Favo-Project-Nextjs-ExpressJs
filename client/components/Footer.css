@@ -1,0 +1,30 @@
+.footer-favo{
+    background-color:#070707;
+    height:400px;
+    max-width:1200px;
+    margin: 10px auto;
+    border-radius:5px;
+}
+.footer-favo-contact{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    
+}
+.footer-favo-contact span{
+    display:block;
+}
+.footer-favo-title{
+    height:100%;
+    display:flex;
+    justify-content:end;
+    align-items:center;
+}
+.footer-favo-title h2 {
+    transform:rotateZ(-90deg);
+    letter-spacing:8px;
+    font-size:60px;
+    position:absolute;
+    left:-30%;
+    font-weight:900;
+}

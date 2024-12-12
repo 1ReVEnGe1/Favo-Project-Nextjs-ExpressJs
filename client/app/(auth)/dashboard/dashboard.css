@@ -1,0 +1,123 @@
+.main-dash{
+    width: 80%;
+}
+.dashboard-container {
+    width: 100%;
+    position: relative;
+}
+
+.right-bar {
+    width: 20%;
+    max-width: 300px;
+    height: 100vh;
+    /* background: linear-gradient(20deg , #006558 , #00CBB1); */
+    /* background: linear-gradient(20deg , #1E1E1E , #00CBB1); */
+    
+    background-color:#1E1E1E;
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding: 12px;
+}
+
+.right-bar-title h1 {
+    font-size: 20px;
+    /* color: #faffce; */
+    color:white;
+}   
+
+.right-bar-title button{
+    color: #ff4040
+}
+
+.right-bar hr {
+    margin-top: 28px;
+    border-color: #4b4b4b;
+}
+
+.right-bar-menu ul {
+    list-style: none;
+    margin-top: 28px;
+}
+
+.right-bar-menu ul li {
+    line-height: 32px;
+    display: block;
+    color: white;
+    padding-right: 8px;
+    font-size: 18px;
+}
+
+.right-bar-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 12px;
+}
+
+.right-bar-menu ul li a:hover {
+    /* color:#fdc8d5; */
+    color: #faffce;
+
+}
+
+.main-bar {
+    position: absolute;
+    top: 0;
+    right: 300px;
+    padding: 40px 50px;
+    width: 80%;
+}
+
+li.active-linkk {
+    background-color: #faffce;
+    color: #1559ab !important;
+}
+
+li.active-linkk a {
+    color: #1559ab !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+td,
+th {
+    border: 1px solid #1E1E1E;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+    max-width: 250px;
+}
+th{
+    font-size: 17px;
+}
+td{
+    font-size: 15px;
+}
+
+
+tr:nth-child(even){
+    /* background-color: #dddddd; */
+    background-color: #353535;
+    
+}
+
+.private {
+    background-color:#b10505;
+    color: white;
+}
+.public{
+    background-color:#4a99f8;
+    color: white;
+}
+.status-blog{
+    padding:2px 20px;
+    border-radius: 20px;
+
+}

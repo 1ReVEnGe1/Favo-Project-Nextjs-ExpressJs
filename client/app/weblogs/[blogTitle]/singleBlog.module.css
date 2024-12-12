@@ -1,0 +1,22 @@
+.main-content img{
+    border-radius: 1.5rem;
+    margin: 16px 0;
+    border: 1px solid #3b3b3b;
+}
+.main-content h2{
+    padding-bottom: 0.25rem;
+    font-size:18px;
+    font-family:'RokhFaSemiBold';
+    color:#E1D79A;
+    margin-bottom:-30px;
+
+}
+.main-content h3{
+    font-size:16px;
+}
+.main-content p{
+    font-size:14px;
+    color:#eee;
+    line-height:23px;
+    margin-bottom:10px;
+}

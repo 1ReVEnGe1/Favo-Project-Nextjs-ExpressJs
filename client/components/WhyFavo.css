@@ -1,0 +1,35 @@
+.why{
+    margin: 50px auto;
+    
+}
+
+.why-favo {
+    width:100%;
+    height:900;
+    min-height:800px;
+    background-image:url('/images/تشریفات فاوو ایونت.webp');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    
+}
+.why-favo-layer{
+    height:100%;
+    background-color:#00000085;
+}
+.why-favo-layer-content{
+    max-width:1200px;
+    margin:50px auto;
+}
+
+.why-favo-svg{
+    height: 50px;
+    width:100%;
+    z-index: 10;  
+}
+.why-favo h2{
+    font-family: 'RokhFaBold';
+}
+.why-favo h3{
+    font-family: 'RokhFaSemiBold';
+}

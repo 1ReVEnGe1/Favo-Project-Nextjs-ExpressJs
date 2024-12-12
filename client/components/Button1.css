@@ -1,0 +1,59 @@
+.about-read-more-btn {
+    width: 100%;
+
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    z-index: 4;
+}
+
+.about-read-more-btn a {
+    width: 150px;
+    height: 40px;
+    /* padding:0.75rem 2.9375rem ; */
+    /* background-color: #606368; */
+    background-color: #a6a182fa;
+    /* background-color: #60636820; */
+    border: 1px solid #606368;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.about-read-more-btn a::before {
+    content: '';
+    color: white;
+    width: 150px;
+    height: 40px;
+    background-image: url('../public/images/btn-texture-gray.png');
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    border: 1px solid #54595f;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.about-read-more-btn a:hover::before {
+    top: -2px;
+    left: -2px;
+}
+
+.about-read-more-btn a:hover {
+    background-color: #6063688f;
+}
