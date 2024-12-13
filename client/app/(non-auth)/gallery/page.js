@@ -1,8 +1,8 @@
 
 import { GALLERY } from "@/database/db"
 import './gallery-page.css'
-import PhotoGallerySection from "../../components/PhotoGallerySection";
-import PageTop from "../../components/PageTop";
+import PhotoGallerySection from "@/components/PhotoGallerySection";
+import PageTop from "@/components/PageTop";
 
 
 const Gallery = () => {

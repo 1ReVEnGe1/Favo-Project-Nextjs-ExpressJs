@@ -57,7 +57,7 @@ exports.uploadAdapterImg = async (req, res) => {
 exports.handleAddBlog = async (req, res) => {
 
     try {
-        const { title, content, status, brief, faqs } = req.body;
+        const { title, content, status, brief, faqs, slug } = req.body;
 
         //Convert faqs to Array. its type is naturally string
         let parsedFaqs = JSON.parse(faqs)
@@ -111,6 +111,8 @@ exports.handleAddBlog = async (req, res) => {
             thumbnailPath = `/uploads/images/dafault/no-image.jpg`;
         }
 
+
+
         //create a new post
         const newPost = new Blog({
             title,
@@ -119,7 +121,8 @@ exports.handleAddBlog = async (req, res) => {
             brief,
             thumbnail: thumbnailPath,
             user: req.user._id,
-            faqs: parsedFaqs
+            faqs: parsedFaqs,
+            slug
         })
 
         //store in db
@@ -197,7 +200,7 @@ exports.editBlog = async (req, res) => {
         }
 
         //Get Request
-        const { title, status, content, brief } = req.body;
+        const { title, status, content, brief, slug } = req.body;
 
         blog.title = title;
         blog.status = status;
@@ -205,6 +208,7 @@ exports.editBlog = async (req, res) => {
         blog.thumbnail = thumbnailPath;
         blog.brief = brief;
         blog.faqs = parsedFaqs;
+        blog.slug = slug
 
         await blog.save()
         console.log('post updated successfully');
@@ -289,3 +293,22 @@ exports.changeBlogStatus = async (req, res) => {
     }
 }
 
+//Check if blog url is duplicated or not
+exports.checkUrlExist = async (req , res) => {
+    try {
+        const {url} = req.body
+        
+
+        const isExistsUrl = await Blog.find({slug:url});
+
+        console.log(isExistsUrl);
+        if(isExistsUrl.length > 0){
+            return res.status(200).json({isUniqueUrl:false})
+        }
+
+        return res.status(200).json({isUniqueUrl:true})
+
+    } catch (error) {
+        res.json({message:'Server Rid'})
+    }
+}

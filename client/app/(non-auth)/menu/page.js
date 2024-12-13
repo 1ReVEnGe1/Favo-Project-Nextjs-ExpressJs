@@ -1,6 +1,6 @@
 
 
-import PageTop from "../../components/PageTop"
+import PageTop from "@/components/PageTop"
 
 
 const Menu = () => {

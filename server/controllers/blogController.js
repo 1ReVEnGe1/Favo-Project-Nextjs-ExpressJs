@@ -32,17 +32,16 @@ exports.getBlogs = async (req, res) => {
 
 exports.getLatestblogs = async (req, res) => {
     try {
-        const { excludeId } = req.query
-
-
+        const { excludeSlug } = req.query
 
         const blogs = await Blog.find({
-            _id: { $ne: excludeId },
+            slug: { $ne: excludeSlug },
             status: 'public'
         })
             .sort({ createdAt: -1 })
             .limit(3)
 
+        console.log(blogs);
         res.status(200).json(blogs)
 
     } catch (error) {
@@ -53,7 +52,7 @@ exports.getLatestblogs = async (req, res) => {
 
 exports.getBlog = async (req, res) => {
     try {
-        const blog = await Blog.findOne({ _id: req.params.id });
+        const blog = await Blog.findOne({ slug: req.params.slug });
 
         if (!blog) {
             return res.status(400).json({ message: 'THERE IS NO SUCH A BLOG' })

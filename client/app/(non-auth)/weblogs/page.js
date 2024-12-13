@@ -1,5 +1,5 @@
-import PageTop from "../../components/PageTop"
-import WeblogHome from "../../components/WeblogHome"
+import PageTop from "@/components/PageTop"
+import WeblogHome from "@/components/WeblogHome"
 
 const Weblogs = async () => {
     const base_url = process.env.BASE_URL
@@ -11,7 +11,7 @@ const Weblogs = async () => {
     }
 
     const data = await res.json()
-
+    console.log(data);
     return (
         <div style={{ 'paddingTop': '100px' }}>
             <PageTop
@@ -26,7 +26,7 @@ const Weblogs = async () => {
                         data.blogs.map((blog, index) => (
                             <WeblogHome
                                 key={blog._id}
-                                blogId={blog._id}
+                                blogSlug={blog.slug}
                                 title={blog.title}
                                 thumbnail={blog.thumbnail}
                                 brief={blog.brief}

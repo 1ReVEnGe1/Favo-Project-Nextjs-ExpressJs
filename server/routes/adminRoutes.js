@@ -21,6 +21,9 @@ router.post('/upload-image' , authenticate , adminController.uploadAdapterImg);
 router.get('/get-post/:id' , authenticate , adminController.getBlog);
 
 // PUT /api/dashboard
-router.put('/edit-blog/:id' , authenticate , adminController.editBlog )
+router.put('/edit-blog/:id' , authenticate , adminController.editBlog );
+
+//post /api/dashboard/check-url
+router.post('/check-url-exist' , authenticate , adminController.checkUrlExist)
 
 module.exports = router

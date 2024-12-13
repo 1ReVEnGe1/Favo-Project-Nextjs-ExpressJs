@@ -58,7 +58,7 @@ export default function DashLayout({ children }) {
 
 
     return (
-        <div style={{paddingTop:'100px'}}>
+        <div >
             <div className='flex'>
                 <aside className="right-bar">
                     <div className="right-bar-title">

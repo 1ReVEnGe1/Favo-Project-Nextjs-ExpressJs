@@ -4,9 +4,10 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 import UploadAdapter from '@/utils/uploadAdapter';
-import Image from 'next/image';
+import { slugify } from '@/utils/slugify';
 
 
 // CKEditor Should Load Dynamicaly
@@ -24,11 +25,15 @@ const AddPost = () => {
   const [error, setError] = useState(null);
   const [thumbnailPreview, setThumbnailPreview] = useState('');
   const [brief, setBrief] = useState('');
-  const [faqs, setFaqs] = useState([])
-  const [faqQuestion, setFaqQuestion] = useState('')
-  const [faqAnswer, setFaqAnswer] = useState('')
+  const [faqs, setFaqs] = useState([]);
+  const [faqQuestion, setFaqQuestion] = useState('');
+  const [faqAnswer, setFaqAnswer] = useState('');
+  const [url, setUrl] = useState('');
+  const [slugUrl, setSlugUrl] = useState('')
 
-  const router = useRouter()
+  const router = useRouter();
+
+  const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
 
 
   //Upload Adapter for adding image into the text editor
@@ -58,7 +63,6 @@ const AddPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
     //Adding ID to headings
     const parser = new DOMParser();
     const doc = parser.parseFromString(content, 'text/html');
@@ -80,7 +84,8 @@ const AddPost = () => {
     formData.append('content', updatedContent);
     formData.append('status', status);
     formData.append('brief', brief);
-    formData.append('faqs', JSON.stringify(faqs))
+    formData.append('faqs', JSON.stringify(faqs));
+    formData.append('slug', slugUrl);
 
     //Append thumbnail when thumbnail has value
     if (thumbnail) {
@@ -143,6 +148,7 @@ const AddPost = () => {
     setFaqAnswer('');
   }
 
+
   //Hanle Delete FAQ
   const handleDeleteFaq = (e, index) => {
     e.preventDefault();
@@ -152,6 +158,52 @@ const AddPost = () => {
     setFaqs(updatedFaq)
   }
 
+
+  //------------- Hanlde URL Input -------------
+  const handleURL = async (e) => {
+    e.preventDefault();
+
+    if (!url) {
+      alert('باید حتما یک URL یونیک انتخاب کنی.')
+    }
+
+    const slugifiedUrl = slugify(url);
+
+
+    try {
+      //Get Token from local storage
+      const token = localStorage.getItem('token');
+
+      //Send Req to check if specified url does exist or not
+      const res = await fetch(`${base_url}/api/dashboard/check-url-exist`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ url: slugifiedUrl })
+      })
+
+      if (!res.ok) {
+        console.log(res);
+        throw new Error('CHECKING URL REQUEST IS NOT OK.')
+      }
+
+      const data = await res.json();
+
+      console.log(data.isUniqueUrl);
+      if(data.isUniqueUrl){
+        return setSlugUrl(slugifiedUrl)
+      }
+      return alert('این URL ی که نوشتی از قبل وجود داره. یک URL دیگه بنویس.')
+
+    } catch (error) {
+
+      console.log('error 500 BROTHER:', error);
+    }
+
+
+  }
 
   return (
     <>
@@ -187,6 +239,43 @@ const AddPost = () => {
             id='title'
             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
           />
+
+          {/* ------------------URL--------------------- */}
+          <label htmlFor='URL' className='block mb-2 text-sm font-medium text-gray-100'>
+            آدرس URL مقاله
+          </label>
+          <div className='flex gap-2'>
+            <input
+              type='text'
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              style={{ direction: 'ltr' }}
+              id='URL'
+              className='w-10/12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+            />
+            <button
+              onClick={handleURL}
+              className='w-2/12 bg-gray-300 hover:bg-gray-400 text-center text-gray-800 text-sm py-1 px-4 rounded-lg items-center ' >
+              بررسی  url
+            </button>
+
+          </div>
+          {
+            slugUrl && (
+              <p
+                style={{
+                  direction: 'ltr',
+                  fontSize: '13px',
+                  backgroundColor: 'rgb(51 ,65 ,85)',
+                  letterSpacing: '1.5px'
+                }}
+                className='text-gray-100 py-2 ps-4 rounded-md '
+              >
+                {base_url}/<span style={{ color: 'rgb(198 194 167)' }} >{slugUrl}</span>
+              </p>
+            )
+          }
+
 
 
           {/* ---------------Thumbnail-------------------- */}

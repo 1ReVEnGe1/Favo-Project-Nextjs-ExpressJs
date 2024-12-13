@@ -32,11 +32,11 @@ const Login = () => {
 
             if (response.ok) {
 
-                if (typeof window !== 'undefined') {
-                    localStorage.setItem('token', data.token);
-                    // window.location.href = '/dashboard';
-                    router.push('/dashboard')
-                }
+                localStorage.setItem('token', data.token);
+                window.location.href = '/dashboard';
+                // if (typeof window !== 'undefined') {
+                //     router.push('/dashboard')
+                // }
 
             } else {
                 setError(data)

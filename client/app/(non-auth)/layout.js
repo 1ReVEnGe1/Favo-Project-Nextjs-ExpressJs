@@ -1,9 +1,9 @@
 
 
-import FixedSticker from "../components/FixedSticker";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import "./globals.css";
+import FixedSticker from "../../components/FixedSticker";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import "../globals.css";
 
 
 

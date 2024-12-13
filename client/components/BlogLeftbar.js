@@ -3,40 +3,42 @@ import Link from "next/link";
 import BlogService from "./BlogService";
 
 
-const BlogSidebar = async ({ blogId }) => {
+
+const BlogLeftbar = async ({ blogSlug }) => {
     const base_url = process.env.BASE_URL
 
-    const res = await fetch(`${base_url}/api/blogs/latest?excludeId=${blogId}`);
+    const res = await fetch(`${base_url}/api/blogs/latest?excludeSlug=${blogSlug}`);
     if (!res.ok) {
-        console.log(res);
+        console.log('errorrrrr: ', res);
+        throw new Error(res)
     }
 
     const latest_blogs = await res.json()
-
+ 
     return (
-        <aside style={{ position: 'sticky', bottom: '10px' }} className=" w-2/6 rounded-3xl  " >
+        <aside style={{ position: 'sticky', bottom: '10px' }} className=" w-4/12 rounded-3xl  " >
             <section className="py-3 px-4 rounded-xl" style={{ 'backgroundColor': 'rgb(26 34 45)' }} >
                 <span className="text-white">آخرین مطالب عروسی</span>
             </section>
             <section className="mt-4">
                 {
                     latest_blogs.map(blog => (
-                        <Link href={`/weblogs/${blog._id}`} className="mb-4 py-4 px-4 h-24 rounded-xl bg-headerSubmenu flex " key={blog._id}>
+                        <Link href={`/weblogs/${blog.slug}`} className="mb-4 py-4 px-4 h-24 rounded-xl bg-headerSubmenu flex " key={blog._id}>
                             <div className="w-3/12">
                                 <Image
                                     src={`${base_url}${blog.thumbnail}`}
                                     width={80}
                                     height={80}
                                     alt={`${blog.title}`}
-                                    style={{ borderRadius: '12px',height:'100%',maxHeight:'90px', objectFit:'cover' }}
+                                    style={{ borderRadius: '12px', height: '100%', maxHeight: '90px', objectFit: 'cover' }}
                                 />
                             </div>
                             <div className="w-9/12">
-                                <h3 style={{ fontSize: '15px',fontFamily:'RokhFaSemiBold' }} className="text-gray-50">{blog.title}</h3>
+                                <h3 style={{ fontSize: '15px', fontFamily: 'RokhFaSemiBold' }} className="text-gray-50">{blog.title}</h3>
                                 <p className="text-gray-300 mt-2" style={{ 'fontSize': '12px' }} >
-                                    {blog.brief.length > 100 ? blog.brief.slice(0 , 100) + '...' : blog.brief}
+                                    {blog.brief.length > 80 ? blog.brief.slice(0, 80) + '...' : blog.brief}
                                     {console.log(blog.brief.length)}
-                                    
+
                                 </p>
 
                             </div>
@@ -94,6 +96,6 @@ const BlogSidebar = async ({ blogId }) => {
     )
 }
 
-export default BlogSidebar
+export default BlogLeftbar;
 
 

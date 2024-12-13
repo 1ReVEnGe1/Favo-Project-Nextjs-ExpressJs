@@ -10,9 +10,7 @@ exports.postSchema = Yup.object().shape({
         size: Yup.number().max(4 * 1024 * 1024, 'عکس نباید بیشتر از 4 مگابایت باشد'),
         mimetype: Yup.mixed().oneOf(['image/jpeg', 'image/png', 'image/webp', 'image/jpg'], 'تنها فرمت های jpg , jpeg , png , webp مجاز به آپلود هستند')
 
-    })
-    
-    ,
+    }),
     brief:Yup.string(),
     content: Yup.string()
         .required('وبلاگ باید دارای محتوا باشد'),
@@ -26,6 +24,8 @@ exports.postSchema = Yup.object().shape({
                 answer:Yup.string()
                     .max(455 , 'یواش بابا!!! جواب نمیتونه بیشتر از 455 کاراکتر باشه')
             })
-        )
-
+        ),
+    slug:Yup.string()
+        .required('برای مقالت URL انتخاب نکردی. پس الان کدوم لینک بریزمش مقالت رو ؟ حتما هم انگلیسی بنویسش')
+        .max(100, 'URL مقالت نباید بیشتر از 100 کاراکتر باشه')
 })

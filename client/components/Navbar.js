@@ -10,6 +10,7 @@ import { Bars3Icon, ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/2
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import useAuthStore from '@/store/authStore';
 
 
 
@@ -20,7 +21,7 @@ const Navbar = () => {
     const menuRef = useRef(null)
     const headerRef = useRef(null)
 
-
+    const { logout } = useAuthStore()
     // let [lastScroll, setLastScroll] = useState(0);
 
     const handleMobileMenu = () => {
@@ -53,7 +54,7 @@ const Navbar = () => {
     useEffect(() => {
 
         const updateScrollDirection = () => {
-            
+
             let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
 
             if (currentScroll > 30) {
@@ -127,7 +128,7 @@ const Navbar = () => {
     return (
         <>
 
-            <header style={{'zIndex':'101'}} className="header bg-headerGray headerFavo" ref={headerRef}>
+            <header style={{ 'zIndex': '101' }} className="header bg-headerGray headerFavo" ref={headerRef}>
                 <div className="header-container">
                     <div className="header-right-part">
                         <Bars3Icon onClick={handleMobileMenu} className="h-10 w-10 font-extrabold text-gray-400 fa-bars" />
@@ -143,6 +144,7 @@ const Navbar = () => {
                             <Link href={'/weblogs'}><li className='text-white  '>وبلاگ</li></Link>
                             <Link href={'/register'}><li className='text-white  '>ثبت نام</li></Link>
                             <Link href={'/login'}><li className='text-white  '>ورود</li></Link>
+                            <button onClick={logout} ><li className='text-white  '>خروج</li></button>
 
                         </ul>
                     </nav>
@@ -152,8 +154,8 @@ const Navbar = () => {
                                 src={logo}
                                 width={200}
                                 height={100}
-                                style={{ 'width':'auto', 'height':'70px' }}
-                                
+                                style={{ 'width': 'auto', 'height': '70px' }}
+
                                 alt='لوگو فاوو ایونت'
                                 placeholder='blur'
                             />
@@ -171,8 +173,8 @@ const Navbar = () => {
                                         src={logo}
                                         alt='تشریفات عروسی فاوو ایونت'
                                         width={150}
-                                        style={{'objectFit':'contain'}}
-                                        
+                                        style={{ 'objectFit': 'contain' }}
+
                                     />
                                     <span className=' absolute top-0 right-1 text-6xl w-max h-max ' onClick={handleCloseMobileMenu}>×</span>
                                 </Link>

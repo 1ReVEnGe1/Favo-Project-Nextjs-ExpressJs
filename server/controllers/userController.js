@@ -73,7 +73,7 @@ exports.handleLogin = async (req, res) => {
 
         if(!recaptchaData.success){
             errors.push({message : 'reCAPTCHA verification failed'});
-            res.status(400).json(errors);
+            return res.status(400).json(errors);
         }
 
         //User does not exist

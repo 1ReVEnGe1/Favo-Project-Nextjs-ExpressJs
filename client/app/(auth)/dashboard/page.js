@@ -116,7 +116,7 @@ const Dashboard = () => {
                                     <td>{index + 1}</td>
                                     <td>
                                              
-                                        <Link style={{'textDecoration':'underLine'}} href={`/weblogs/${blog._id}`}>
+                                        <Link style={{'textDecoration':'underLine'}} href={`/weblogs/${blog.slug}`}>
                                             {blog.title.length > 100 ? blog.title.slice(0, 20) + '...' : blog.title}
                                         </Link>
                                     </td>

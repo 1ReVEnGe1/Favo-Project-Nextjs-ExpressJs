@@ -47,6 +47,11 @@ const blogSchema = new mongoose.Schema({
             }
         }
     ],
+    slug:{
+        type:String,
+        required:[true , 'خنگ!!! ، آدرس URL یادت رفت. حتما هم انگلیسی بنویسیش'],
+        unique:[true , 'این URL از قبل موچوده']
+    },
     createdAt: {
         type: Date,
         default: Date.now

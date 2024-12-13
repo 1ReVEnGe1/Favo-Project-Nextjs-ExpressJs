@@ -1,5 +1,4 @@
 
-import { LATEST_WEBLOG_DETAILS } from "@/database/db"
 import WeblogHome from "./WeblogHome"
 import './WeblogSection.css'
 
@@ -9,9 +8,9 @@ const WeblogSection = async () => {
 
     const res = await fetch(`${base_url}/api/blogs/latest` , {next : {revalidate: 60}} )
     const blogs = await res.json()
+    console.log(blogs);
     if (res.ok) {
         console.log(blogs);
-
     }
 
     return (
@@ -24,7 +23,7 @@ const WeblogSection = async () => {
                     blogs.map((blog, index) => (
                         <WeblogHome
                             key={blog._id}
-                            blogId={blog._id}
+                            blogSlug={blog.slug}
                             title={blog.title}
                             thumbnail={blog.thumbnail}
                             brief={blog.brief}
