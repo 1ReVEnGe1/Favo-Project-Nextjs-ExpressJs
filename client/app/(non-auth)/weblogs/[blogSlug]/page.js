@@ -6,6 +6,9 @@ import './singleBlog.css'
 
 import BlogLeftbar from "@/components/BlogLeftbar";
 
+
+
+
 const SingleBlog = async ({ params }) => {
 
   const { blogSlug } = await params
@@ -20,15 +23,18 @@ const SingleBlog = async ({ params }) => {
 
   const headings = extractHeadings(blog.content)
 
+ 
 
   return (
-    <div style={{ 'marginTop': '150px', 'maxWidth': '1200px' }} className=" flex gap-4 mx-auto">
 
+    <>
+  
+    <div style={{ 'marginTop': '150px', 'maxWidth': '1200px' }} className=" flex gap-4 mx-auto">
 
       {/* main  */}
       <main className="w-8/12 bg-headerSubmenu p-6 rounded-3xl">
         <div
-          className={`w-full h-48 bg-cover bg-center rounded-xl relative`}
+          className={`w-full h-48 bg-cover bg-center rounded-xl relative mb-10`}
           style={{ backgroundImage: `url(${base_url}${blog.thumbnail})` }}
         >
           <div className=" flex justify-center items-center bg-black bg-opacity-55 absolute w-full h-full rounded-2xl ">
@@ -93,6 +99,7 @@ const SingleBlog = async ({ params }) => {
       <BlogLeftbar blogSlug={blogSlug} />
 
     </div>
+    </>
   )
 }
 

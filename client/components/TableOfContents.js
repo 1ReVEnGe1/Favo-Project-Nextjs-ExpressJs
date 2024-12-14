@@ -4,7 +4,7 @@ const TableOfContents = ({ headings }) => {
 
 
     return (
-        <div className="mb-8" style={{ background: 'linear-gradient(180deg, #212121, #353535)', border: '1px solid #323232', borderRadius: '24px', padding: '20px', }}>
+        <div className={`mb-8  ${ styles['toc-cont']}`} style={{  border: '1px solid #323232', borderRadius: '12px', padding: '20px', }}>
             <span className="text-white font-bold text-md">آنچه خواهید خواند</span>
             <hr style={{ borderColor: 'rgb(131 130 130)' }} className="mt-4" />
             <ul  className={`pt-4 ${styles['toc-ul']}`}>

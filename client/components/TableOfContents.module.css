@@ -4,9 +4,19 @@
   transform: translateX(20px);
   cursor: pointer;
   transition: border-right 0.3s ease;
-  outline: none; /* Removes default outline */
+  outline: none;
+  /* Removes default outline */
 }
 
 .toc-ul li a:focus {
-  border-right: 2px solid #E1D79A; /* Border on focus */
+  border-right: 2px solid #E1D79A;
+  /* Border on focus */
+}
+
+.toc-cont {
+
+  background-color: #494844;
+
+
+
 }

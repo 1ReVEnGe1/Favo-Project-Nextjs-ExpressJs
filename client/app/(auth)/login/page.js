@@ -1,7 +1,8 @@
 'use client'
+import useAuthStore from "@/store/authStore";
 import { useState } from "react"
 import ReCAPTCHA from "react-google-recaptcha";
-import { useRouter } from "next/navigation";
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -10,7 +11,8 @@ const Login = () => {
     const [remember, setRememeber] = useState(false);
 
     const [recaptchaToken, setRecaptchaToken] = useState('')
-    const router = useRouter()
+
+    const { setIsLoggedIn } = useAuthStore()
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -33,10 +35,8 @@ const Login = () => {
             if (response.ok) {
 
                 localStorage.setItem('token', data.token);
+                setIsLoggedIn(true)
                 window.location.href = '/dashboard';
-                // if (typeof window !== 'undefined') {
-                //     router.push('/dashboard')
-                // }
 
             } else {
                 setError(data)
@@ -49,6 +49,7 @@ const Login = () => {
         }
     }
 
+    //Hanlde Remember me Checkbox
     const handleCheckbox = (e) => {
         const checked = e.target.checked;
         setRememeber(checked)

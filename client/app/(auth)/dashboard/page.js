@@ -7,7 +7,6 @@ import Link from "next/link";
 
 const Dashboard = () => {
     const [blogs, setBlogs] = useState([]);
-    const base_url2 = process.env.BASE_URL2
 
     useEffect(() => {
 

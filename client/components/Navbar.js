@@ -21,8 +21,8 @@ const Navbar = () => {
     const menuRef = useRef(null)
     const headerRef = useRef(null)
 
-    const { logout } = useAuthStore()
-    // let [lastScroll, setLastScroll] = useState(0);
+    const { logout , isLoggedIn } = useAuthStore()
+
 
     const handleMobileMenu = () => {
         setIsOpenMobileMenu(prev => !isOpenMobileMenu)
@@ -142,9 +142,11 @@ const Navbar = () => {
                             <Link href={'/menu'}><li className='text-white  '>منو ها</li></Link>
                             <Link href={'/'}><li className='text-white  '>تماس با ما</li></Link>
                             <Link href={'/weblogs'}><li className='text-white  '>وبلاگ</li></Link>
-                            <Link href={'/register'}><li className='text-white  '>ثبت نام</li></Link>
-                            <Link href={'/login'}><li className='text-white  '>ورود</li></Link>
-                            <button onClick={logout} ><li className='text-white  '>خروج</li></button>
+                            {/* <Link href={'/register'}><li className='text-white  '>ثبت نام</li></Link>
+                            <Link href={'/login'}><li className='text-white  '>ورود</li></Link> */}
+                            {
+                                isLoggedIn && <button onClick={logout} ><li className='text-white  '>خروج</li></button>
+                            }  
 
                         </ul>
                     </nav>

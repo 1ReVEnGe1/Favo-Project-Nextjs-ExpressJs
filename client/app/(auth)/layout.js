@@ -5,10 +5,7 @@ import "../globals.css";
 
 
 
-export const metadata = {
-  title: "تشریفات عروسی فاووایونت 💖",
-  description: "تشریفات عروسی فاوو ایونت  برگزارکننده لوکس ترین مراسم های عروسی",
-};
+
 
 export default function RootLayout({ children }) {
   return (
