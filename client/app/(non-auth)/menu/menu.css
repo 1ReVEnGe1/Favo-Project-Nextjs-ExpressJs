@@ -1,0 +1,23 @@
+
+
+.menu-favo {
+    border: 1px solid #2e2e2e;
+    
+}
+.menu-favo ul {
+    line-height: 35px;
+}
+.menu-favo ul li {
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-size: 17px;   
+}
+.menu-favo ul li:nth-child(odd) {
+    
+    color: #fcffe2;    
+}
+.menu-favo ul li svg{
+    fill: #a6a182;
+    width: 19px;
+}
