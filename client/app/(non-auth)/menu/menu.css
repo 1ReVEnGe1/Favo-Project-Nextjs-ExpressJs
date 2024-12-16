@@ -1,8 +1,21 @@
-
+.menu-cont h2{
+    font-size: 24px;
+    font-family: 'RokhFaSemiBold';
+}
 
 .menu-favo {
-    border: 1px solid #2e2e2e;
+    padding: 16px;
+    border-radius:20px ;
+    position: relative;
     
+}
+.menu-favo h3{
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+.menu-number{
+    color: rgb(212, 212, 212);
 }
 .menu-favo ul {
     line-height: 35px;
@@ -11,13 +24,155 @@
     display: flex;
     gap: 10px;
     color: white;
-    font-size: 17px;   
+    font-size: 15px;   
 }
 .menu-favo ul li:nth-child(odd) {
     
     color: #fcffe2;    
 }
 .menu-favo ul li svg{
-    fill: #a6a182;
+    fill: #fff7c4;
+    width: 16px;
+}
+.menu-gift-icon{
     width: 19px;
+    transform: translateX(1px);
+}
+
+.menu-label{
+    position: absolute;
+    left: -13px;
+    background:rgb(108, 128, 115) ;
+    color: #fff;
+    padding: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.menu-label svg{
+    width: 20px;
+}
+.menu-label::after{
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid rgb(88, 104, 93);
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+    left: -1px;
+    top: -10px;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width : 640px){
+    .menu-favo {
+       padding: 14px;
+       border-radius:16px ;
+       position: relative;
+    }
+    .menu-favo h3 {
+        font-size: 10px;
+        padding: 4px 12px;
+        border-radius: 8px;
+        
+    }
+    .menu-number{
+        font-size: 13px;
+    }
+    .menu-favo ul {
+        line-height: 26px;
+    }
+    .menu-favo ul li {
+        font-size: 12px;   
+    }
+    .menu-favo ul li svg{
+        fill: #fff7c4;
+        width: 13px;
+    }
+    .menu-gift-icon{
+        width: 17px;
+        transform: translateX(1px);
+    }   
+}
+
+@media only screen and (max-width : 768px){
+    .menu-cont h2{
+        font-size: 23px;
+     
+    }
+    .menu-favo {
+       padding: 10px;
+       border-radius:12px ;
+       position: relative;
+
+    }
+    .menu-favo h3 {
+        font-size: 10px;
+        padding: 4px 12px;
+        border-radius: 8px;
+        
+    }
+    .menu-number{
+        font-size: 12px;
+    }
+    .menu-favo ul {
+        line-height: 26px;
+    }
+    .menu-favo ul li {
+        font-size: 11px;
+        gap: 6px;  
+    }
+    .menu-favo ul li svg{
+        fill: #fff7c4;
+        width: 10px;
+    }
+    .menu-gift-icon{
+        width: 16px;
+        transform: translateX(1px);
+    } 
+}
+
+
+
+@media only screen and (max-width : 1024px){
+    .menu-cont h2{
+        font-size: 23px;
+     
+    }
+    .menu-favo {
+       padding: 10px;
+       border-radius:16px ;
+       position: relative;
+
+    }
+    .menu-favo h3 {
+        font-size: 12px;
+        padding: 4px 12px;
+        border-radius: 8px;
+        
+    }
+    .menu-number{
+        font-size: 12px;
+    }
+    .menu-favo ul {
+        line-height: 26px;
+    }
+    .menu-favo ul li {
+        font-size: 12px;
+        gap: 10px;  
+    }
+    .menu-favo ul li svg{
+        fill: #fff7c4;
+        width: 13px;
+    }
+    .menu-gift-icon{
+        width: 17px;
+        transform: translateX(1px);
+    }   
 }

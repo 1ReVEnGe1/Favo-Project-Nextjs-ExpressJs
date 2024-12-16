@@ -18,7 +18,7 @@ const FixedSticker = () => {
     return (
         <div className="fixed-sticker">
             <button onClick={handleToggle} className={`${isOpen ? 'fixed-sticker-active-btn' : ''} hover:bg-slate-700`}>
-                <span> مشاوره تخصصی &#8595;</span>
+                <span> ارتباط با فاوو ایونت &#8595;</span>
             </button>
 
             <div className={`fixed-sticker-numbers ${isOpen ? 'fixed-sticker-active fixed-sticker-active-btn2' : ''}`} >

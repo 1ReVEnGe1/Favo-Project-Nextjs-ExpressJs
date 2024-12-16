@@ -15,6 +15,7 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+
 }
 
 .fixed-sticker button {
@@ -23,6 +24,7 @@
     font-size:13px;
     padding:0.6em 0.6em;
     border-radius:10px;
+    border: 1px solid rgb(114, 114, 114);
 }
 
 .fixed-sticker-numbers{

@@ -14,7 +14,7 @@ const BlogLeftbar = async ({ blogSlug }) => {
     }
 
     const latest_blogs = await res.json()
- 
+
     return (
         <aside style={{ position: 'sticky', bottom: '10px' }} className=" w-4/12 rounded-3xl  " >
             <section className="py-3 px-4 rounded-xl" style={{ 'backgroundColor': 'rgb(26 34 45)' }} >
@@ -34,7 +34,9 @@ const BlogLeftbar = async ({ blogSlug }) => {
                                 />
                             </div>
                             <div className="w-9/12">
-                                <h3 style={{ fontSize: '15px', fontFamily: 'RokhFaSemiBold' }} className="text-gray-50">{blog.title}</h3>
+                                <h3 style={{ fontSize: '15px', fontFamily: 'RokhFaSemiBold' }} className="text-gray-50">
+                                    {blog.title.length > 40 ? blog.title.slice(0 , 40) + '...' : blog.title}
+                                </h3>
                                 <p className="text-gray-300 mt-2" style={{ 'fontSize': '12px' }} >
                                     {blog.brief.length > 80 ? blog.brief.slice(0, 80) + '...' : blog.brief}
                                     {console.log(blog.brief.length)}
