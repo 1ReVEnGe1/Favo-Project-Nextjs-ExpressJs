@@ -36,7 +36,7 @@
 }
 .menu-gift-icon{
     width: 19px;
-    transform: translateX(1px);
+    transform: translateX(10px);
 }
 
 .menu-label{
@@ -51,10 +51,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    animation: bgChange 2s infinite ;
+    
 }
 .menu-label svg{
     width: 20px;
+    margin-right: 4px;
+}
+.menu-label span{
+    margin-right: 8px;
+    margin-left: 4px;
+    font-size: 15px;
+    font-family: 'RokhFaSemiBold';
+    transform: translateY(2px);
+    
+  
+    
 }
 .menu-label::after{
     content: '';
@@ -67,7 +79,19 @@
     top: -10px;
 }
 
-
+@keyframes bgChange{
+    0%{
+        background-color:rgb(88, 104, 93)
+    }
+    50%{
+        /* background-color: rgb(49, 58, 52) */
+        background-color:rgb(120, 141, 126)
+    }
+    100%{
+        background-color:rgb(88, 104, 93)
+    }
+    
+}
 
 /* Responsive */
 @media only screen and (max-width : 640px){
