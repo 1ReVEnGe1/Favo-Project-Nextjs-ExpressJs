@@ -24,6 +24,7 @@ export async function generateMetadata({ params }) {
   }
 
   const blog = await res.json();
+  const company = "تشریفات عروسی فاوو ایونت"
 
   //Define JSON-LD Schema
   const blogSchema = [
@@ -91,7 +92,7 @@ export async function generateMetadata({ params }) {
       "serviceType": "دیزاین دکوراسیون مراسم",
       "provider": {
         "@type": "Organization",
-        "name": "تشریفات بارمن ای"
+        "name": company
       },
       "url": `${base_url}/services/decoration`,
       "image": {
@@ -106,7 +107,7 @@ export async function generateMetadata({ params }) {
       "serviceType": "گل آرایی",
       "provider": {
         "@type": "Organization",
-        "name": "تشریفات بارمن ای"
+        "name": company
       },
       "url": `${base_url}/services/flower-arrangement`,
       "image": {
@@ -121,7 +122,7 @@ export async function generateMetadata({ params }) {
       "serviceType": "تیم باریستا و بارتندر",
       "provider": {
         "@type": "Organization",
-        "name": "تشریفات بارمن ای"
+        "name": company
       },
       "url": `${base_url}/services/barista-bartender`,
       "image": {
@@ -136,7 +137,7 @@ export async function generateMetadata({ params }) {
       "serviceType": "فینگرفود",
       "provider": {
         "@type": "Organization",
-        "name": "تشریفات بارمن ای"
+        "name": company
       },
       "url": `${base_url}/services/finger-foods`,
       "image": {
@@ -151,7 +152,7 @@ export async function generateMetadata({ params }) {
       "serviceType": "دیجی و موسیقی زنده",
       "provider": {
         "@type": "Organization",
-        "name": "تشریفات بارمن ای"
+        "name": company
       },
       "url": `${base_url}/services/live-music-dj`,
       "image": {
