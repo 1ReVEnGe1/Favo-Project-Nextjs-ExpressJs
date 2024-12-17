@@ -168,7 +168,17 @@ export async function generateMetadata({ params }) {
     keywords: blog.keywords,
     other: {
       "script:ld+json": JSON.stringify(blogSchema),
-      "link:canonical": `${base_url}/weblogs/${blogSlug}`
+      "link:canonical": `${base_url}/weblogs/${blogSlug}`,
+      "meta:og:title": blog.title,
+      "meta:og:description": blog.brief,
+      "meta:og:image": `${base_url}${blog.thumbnail}`,
+      "meta:og:url": `${base_url}/weblogs/${blogSlug}`,
+      "meta:og:type": "article",
+      "meta:twitter:card": "summary_large_image",
+      "meta:twitter:title": blog.title,
+      "meta:twitter:description": blog.brief,
+      "meta:twitter:image": `${base_url}${blog.thumbnail}`,
+      "meta:twitter:url": `${base_url}/weblogs/${blogSlug}`,
     }
   }
 }
@@ -230,12 +240,12 @@ const SingleBlog = async ({ params }) => {
                   {formatDate2(blog.createdAt)}
                 </span>
 
-            </div>
+              </div>
 
             </div>
           </div>
 
-          
+
           {/* --------------Table Of Content-------------- */}
           <TableOfContents headings={headings} />
 
