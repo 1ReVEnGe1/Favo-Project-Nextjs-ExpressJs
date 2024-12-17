@@ -13,9 +13,10 @@
 }
 .card h2{
     color:white;
-    font-size:20px;
-    font-family:'DanaFaMedium';
+    font-size:23px;
+    font-family:'RokhFaBold';
     margin-bottom:25px;
+    word-spacing: 3px;
 }
 .card p{
     color:#dcdccb;

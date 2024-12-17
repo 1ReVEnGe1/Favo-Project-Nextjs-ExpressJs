@@ -2,21 +2,32 @@
     font-size: 24px;
     font-family: 'RokhFaSemiBold';
 }
+.menu-cont h2 span{
+    font-size: 27px!important;
+    color: #ece7c1;
+}
+
+.menu-favo-parent > div:nth-child(even){
+    border-radius:20px 2px 2px 20px ;
+}
 
 .menu-favo {
     padding: 16px;
-    border-radius:20px ;
+    border-radius:2px 20px 20px 2px ;
     position: relative;
-    
 }
 .menu-favo h3{
     color: #fff;
     padding: 4px 12px;
     border-radius: 8px;
+    font-size: 14px;
 }
 .menu-number{
     color: rgb(212, 212, 212);
+    font-family: 'greatVibes';
+    font-size: 20px;
 }
+
 .menu-favo ul {
     line-height: 35px;
 }
@@ -24,35 +35,34 @@
     display: flex;
     gap: 10px;
     color: white;
-    font-size: 15px;   
+    font-size: 15px;
 }
 .menu-favo ul li:nth-child(odd) {
-    
     color: #fcffe2;    
 }
 .menu-favo ul li svg{
     fill: #fff7c4;
     width: 16px;
 }
+
 .menu-gift-icon{
     width: 19px;
-    transform: translateX(10px);
+    transform: translateX(1px);
 }
 
+/* Gift label */
 .menu-label{
     position: absolute;
     left: -13px;
     background:rgb(108, 128, 115) ;
     color: #fff;
     padding: 4px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 80px;
     border-radius: 0 6px 6px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: bgChange 2s infinite ;
-    
 }
 .menu-label svg{
     width: 20px;
@@ -63,10 +73,7 @@
     margin-left: 4px;
     font-size: 15px;
     font-family: 'RokhFaSemiBold';
-    transform: translateY(2px);
-    
-  
-    
+    transform: translateY(2px);    
 }
 .menu-label::after{
     content: '';
@@ -79,9 +86,97 @@
     top: -10px;
 }
 
+/* Luxurious label */
+.menu-label-luxury{
+    position: absolute;
+    left: -13px;
+    background:rgb(99 ,87 ,85);
+    color: #fff;
+    padding: 4px;
+    top: 80px;
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgChange3 2s infinite ;
+}
+.menu-label-luxury svg{
+    width: 20px;
+    margin-right: 4px;
+}
+.menu-label-luxury span{
+    margin-right: 8px;
+    margin-left: 4px;
+    font-size: 15px;
+    font-family: 'RokhFaSemiBold';
+    transform: translateY(2px);    
+}
+.menu-label-luxury::after{
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid rgb(99, 87, 85);
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+    left: -1px;
+    top: -10px;
+}
+
+/* Economic label */
+.menu-label-economic{
+    position: absolute;
+    left: -13px;
+    background:rgb(103, 100 ,88) ;
+    color: #fff;
+    padding: 4px;
+    top: 80px;
+    border-radius: 0px 6px 6px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgChange2 2s infinite ;
+}
+.menu-label-economic svg{
+    width: 20px;
+    margin-right: 4px;
+}
+.menu-label-economic span{
+    margin-right: 8px;
+    margin-left: 4px;
+    font-size: 15px;
+    font-family: 'RokhFaSemiBold';
+    transform: translateY(2px);    
+}
+.menu-label-economic::after{
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid rgb(87, 84, 74);
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+    left: -1px;
+    top: -10px;
+}
+/* shadow */
+.sh{
+    box-shadow: 0 0 5px #a6a182 ,
+    0 0 15px #a6a182, 
+    0 0 30px #a6a182, 
+    0 0 40px #a6a182, 
+    0 0 70px #a6a182;
+}
+.sh:hover{
+    box-shadow: 0 0 5px #a6a182 ,
+    0 0 25px #a6a182, 
+    0 0 50px #a6a182, 
+    0 0 100px #a6a182, 
+    0 0 200px #a6a182;
+}
+
+/* animations */
 @keyframes bgChange{
     0%{
-        background-color:rgb(88, 104, 93)
+        background-color:rgb(88, 104, 93);
     }
     50%{
         /* background-color: rgb(49, 58, 52) */
@@ -92,9 +187,93 @@
     }
     
 }
+@keyframes bgChange2{
+    0%{
+        background-color:rgb(103 ,100 ,88)
+    }
+    50%{
+        /* background-color: rgb(49, 58, 52) */
+        background-color:rgb(141, 137, 122)
+    }
+    100%{
+        background-color:rgb(103 ,100 ,88)
+    }
+    
+}
+
+@keyframes bgChange3{
+    0%{
+        background-color:rgb(99 ,87 ,85)
+    }
+    50%{
+        /* background-color: rgb(49, 58, 52) */
+        background-color:rgb(138, 121, 118)
+    }
+    100%{
+        background-color:rgb(99 ,87 ,85)
+    }
+    
+}
 
 /* Responsive */
+@media only screen and (max-width : 400px){
+    .menu-gift-icon{
+        width: 14px;
+        transform: translateX(1px);
+    }
+    .menu-label{
+        padding: 1px;
+        top: 50px;
+    }
+    .menu-label svg{
+        width: 14px;
+        margin-right: 2px;
+    }
+    .menu-label span{
+        margin-right: 4px;
+        margin-left: 2px;
+        font-size: 11px;
+    } 
+    .menu-label-economic{
+        padding: 1px;
+        top: 50px;
+    }
+    .menu-label-economic svg{
+        width: 14px;
+        margin-right: 2px;
+    }
+    .menu-label-economic span{
+        margin-right: 4px;
+        margin-left: 2px;
+        font-size: 11px;
+    } 
+
+    .menu-label-luxury{
+        padding: 1px;
+        top: 50px;
+    }
+    .menu-label-luxury svg{
+        width: 14px;
+        margin-right: 2px;
+    }
+    .menu-label-luxury span{
+        margin-right: 4px;
+        margin-left: 2px;
+        font-size: 11px;
+    } 
+}
+
 @media only screen and (max-width : 640px){
+    .menu-cont h2{
+        font-size: 20px!important;
+    }
+    .menu-cont h2 span{
+        font-size: 24px!important;
+    }
+
+    .menu-favo-parent > div:nth-child(even){
+        border-radius:2px 16px 16px 2px ;
+    }
     .menu-favo {
        padding: 14px;
        border-radius:16px ;
@@ -104,11 +283,57 @@
         font-size: 10px;
         padding: 4px 12px;
         border-radius: 8px;
-        
     }
+
     .menu-number{
         font-size: 13px;
     }
+
+    .menu-label{
+        padding: 2px;
+        top: 50px;
+    }
+    .menu-label svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    } 
+    
+    .menu-label-economic{
+        padding: 2px;
+        top: 50px;
+    }
+    .menu-label-economic svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label-economic span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    }
+
+    .menu-label-luxury{
+        padding: 2px;
+        top: 50px;
+    }
+    .menu-label-luxury svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label-luxury span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    } 
+
     .menu-favo ul {
         line-height: 26px;
     }
@@ -119,6 +344,7 @@
         fill: #fff7c4;
         width: 13px;
     }
+
     .menu-gift-icon{
         width: 17px;
         transform: translateX(1px);
@@ -134,14 +360,42 @@
        padding: 10px;
        border-radius:12px ;
        position: relative;
-
     }
     .menu-favo h3 {
         font-size: 10px;
         padding: 4px 12px;
-        border-radius: 8px;
-        
+        border-radius: 8px; 
     }
+    .menu-label{
+        padding: 2px;
+        top: 50px;
+    }
+    .menu-label svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    }
+
+    .menu-label-luxury{
+        padding: 2px;
+        top: 50px;
+    }
+    .menu-label-luxury svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label-luxury span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    } 
+
     .menu-number{
         font-size: 12px;
     }
@@ -171,7 +425,7 @@
     }
     .menu-favo {
        padding: 10px;
-       border-radius:16px ;
+       border-radius: 4px 12px 12px 4px ;
        position: relative;
 
     }
@@ -181,6 +435,73 @@
         border-radius: 8px;
         
     }
+
+    .menu-label{
+        padding: 2px;
+        top: 50px;
+        left: -10px;
+    }
+    .menu-label::after{
+        content: '';
+        position: absolute;
+        border-bottom: 10px solid rgb(88, 104, 93);
+        border-left: 11px solid transparent;  
+    }
+    .menu-label svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    }
+
+    .menu-label-economic{
+        padding: 2px;
+        top: 50px;
+        left: -10px;
+    }
+    .menu-label-economic::after{
+        content: '';
+        position: absolute;
+        border-bottom: 10px solid rgb(87, 84, 74);
+        border-left: 11px solid transparent;   
+    }
+    .menu-label-economic svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label-economic span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    } 
+
+    .menu-label-luxury{
+        padding: 2px;
+        top: 50px;
+        left: -10px;
+    }
+    .menu-label-luxury::after{
+        content: '';
+        position: absolute;
+        border-bottom: 10px solid rgb(87, 84, 74);
+        border-left: 11px solid transparent;   
+    }
+    .menu-label-luxury svg{
+        width: 14px;
+        margin-right: 4px;
+    }
+    .menu-label-luxury span{
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 12px;
+        transform: translateY(1px);
+    } 
+    
     .menu-number{
         font-size: 12px;
     }

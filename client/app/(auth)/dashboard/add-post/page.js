@@ -29,7 +29,8 @@ const AddPost = () => {
   const [faqQuestion, setFaqQuestion] = useState('');
   const [faqAnswer, setFaqAnswer] = useState('');
   const [url, setUrl] = useState('');
-  const [slugUrl, setSlugUrl] = useState('')
+  const [slugUrl, setSlugUrl] = useState('');
+  const [keywords , setKeywords] = useState('')
 
   const router = useRouter();
 
@@ -86,6 +87,7 @@ const AddPost = () => {
     formData.append('brief', brief);
     formData.append('faqs', JSON.stringify(faqs));
     formData.append('slug', slugUrl);
+    formData.append('keywords', keywords);
 
     //Append thumbnail when thumbnail has value
     if (thumbnail) {
@@ -191,8 +193,7 @@ const AddPost = () => {
 
       const data = await res.json();
 
-      console.log(data.isUniqueUrl);
-      if(data.isUniqueUrl){
+      if (data.isUniqueUrl) {
         return setSlugUrl(slugifiedUrl)
       }
       return alert('این URL ی که نوشتی از قبل وجود داره. یک URL دیگه بنویس.')
@@ -337,7 +338,7 @@ const AddPost = () => {
             onChange={(e) => setBrief(e.target.value)}
             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 '
           >
-            {brief}
+            
           </textarea>
 
 
@@ -429,6 +430,22 @@ const AddPost = () => {
           />
 
 
+          {/* ----------------------Keywords-------------------- */}
+          <label
+            htmlFor="keywords"
+            className="block mb-2 text-sm font-medium text-gray-100"
+          >
+            کلمات کلیدی (بین 4 تا 8 کلمه)
+          </label>
+          <textarea
+            id='keywords'
+            value={keywords}
+            placeholder='کلمات را با " , " از هم جدا کنید مثلا : گل آرایی, حریرآرایی'
+            onChange={(e) => setKeywords(e.target.value)}
+            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 '
+          >
+            
+          </textarea>
 
 
           {/* Publish Button */}

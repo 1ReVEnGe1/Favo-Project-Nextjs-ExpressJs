@@ -57,7 +57,9 @@ exports.uploadAdapterImg = async (req, res) => {
 exports.handleAddBlog = async (req, res) => {
 
     try {
-        const { title, content, status, brief, faqs, slug } = req.body;
+        const { title, content, status, brief, faqs, slug, keywords } = req.body;
+
+        console.log(keywords);
 
         //Convert faqs to Array. its type is naturally string
         let parsedFaqs = JSON.parse(faqs)
@@ -122,7 +124,8 @@ exports.handleAddBlog = async (req, res) => {
             thumbnail: thumbnailPath,
             user: req.user._id,
             faqs: parsedFaqs,
-            slug
+            slug,
+            keywords
         })
 
         //store in db
@@ -200,7 +203,7 @@ exports.editBlog = async (req, res) => {
         }
 
         //Get Request
-        const { title, status, content, brief, slug } = req.body;
+        const { title, status, content, brief, slug, keywords } = req.body;
 
         blog.title = title;
         blog.status = status;
@@ -208,7 +211,8 @@ exports.editBlog = async (req, res) => {
         blog.thumbnail = thumbnailPath;
         blog.brief = brief;
         blog.faqs = parsedFaqs;
-        blog.slug = slug
+        blog.slug = slug;
+        blog.keywords = keywords;
 
         await blog.save()
         console.log('post updated successfully');

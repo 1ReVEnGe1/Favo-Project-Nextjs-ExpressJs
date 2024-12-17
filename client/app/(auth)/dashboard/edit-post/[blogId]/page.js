@@ -31,7 +31,8 @@ const EditPost = ({ params }) => {
     const [faqQuestion, setFaqQuestion] = useState('');
     const [faqAnswer, setFaqAnswer] = useState('');
     const [url, setUrl] = useState('');
-    const [slugUrl, setSlugUrl] = useState('')
+    const [slugUrl, setSlugUrl] = useState('');
+    const [keywords , setKeywords] = useState('')
 
     const router = useRouter();
 
@@ -52,6 +53,7 @@ const EditPost = ({ params }) => {
                 setFaqs(blog.faqs || []);
                 setThumbnailPreview(`http://localhost:8080${blog.thumbnail}` || '');
                 setSlugUrl(blog.slug || '');
+                setKeywords(blog.keywords || '');
 
             } catch (err) {
                 console.log('Error fetching blog:', err);
@@ -111,6 +113,7 @@ const EditPost = ({ params }) => {
         formData.append('brief', brief);
         formData.append('slug', slugUrl);
         formData.append('faqs', JSON.stringify(faqs));
+        formData.append('keywords', keywords);
 
         if (thumbnail instanceof File) {
             formData.append('thumbnail', thumbnail);
@@ -182,48 +185,48 @@ const EditPost = ({ params }) => {
     //------------- Hanlde URL Input -------------
     const handleURL = async (e) => {
         e.preventDefault();
-    
+
         if (!url) {
-          alert('باید حتما یک URL یونیک انتخاب کنی.')
+            alert('باید حتما یک URL یونیک انتخاب کنی.')
         }
-    
+
         const slugifiedUrl = slugify(url);
-    
-    
+
+
         try {
-          //Get Token from local storage
-          const token = localStorage.getItem('token');
-    
-          //Send Req to check if specified url does exist or not
-          const res = await fetch(`${base_url}/api/dashboard/check-url-exist`, {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${token}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ url: slugifiedUrl })
-          })
-    
-          if (!res.ok) {
-            console.log(res);
-            throw new Error('CHECKING URL REQUEST IS NOT OK.')
-          }
-    
-          const data = await res.json();
-    
-          console.log(data.isUniqueUrl);
-          if(data.isUniqueUrl){
-            return setSlugUrl(slugifiedUrl)
-          }
-          return alert('این URL ی که نوشتی از قبل وجود داره. یک URL دیگه بنویس.')
-    
+            //Get Token from local storage
+            const token = localStorage.getItem('token');
+
+            //Send Req to check if specified url does exist or not
+            const res = await fetch(`${base_url}/api/dashboard/check-url-exist`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url: slugifiedUrl })
+            })
+
+            if (!res.ok) {
+                console.log(res);
+                throw new Error('CHECKING URL REQUEST IS NOT OK.')
+            }
+
+            const data = await res.json();
+
+            console.log(data.isUniqueUrl);
+            if (data.isUniqueUrl) {
+                return setSlugUrl(slugifiedUrl)
+            }
+            return alert('این URL ی که نوشتی از قبل وجود داره. یک URL دیگه بنویس.')
+
         } catch (error) {
-    
-          console.log('error 500 BROTHER:', error);
+
+            console.log('error 500 BROTHER:', error);
         }
-    
-    
-      }
+
+
+    }
 
     return (
         <>
@@ -450,7 +453,22 @@ const EditPost = ({ params }) => {
                         }}
                     />
 
-
+                    {/* ----------------------Keywords-------------------- */}
+                    <label
+                        htmlFor="keywords"
+                        className="block mb-2 text-sm font-medium text-gray-100"
+                    >
+                        کلمات کلیدی (بین 4 تا 8 کلمه)
+                    </label>
+                    <textarea
+                        id='keywords'
+                        value={keywords}
+                        placeholder='کلمات را با " , " از هم جدا کنید مثلا : گل آرایی, حریرآرایی'
+                        onChange={(e) => setKeywords(e.target.value)}
+                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 '
+                    >
+                        {keywords}
+                    </textarea>
 
 
                     {/* Publish Button */}

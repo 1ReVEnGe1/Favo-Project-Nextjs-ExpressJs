@@ -60,15 +60,38 @@
 @font-face {
     font-family:'RokhFaSemiBold';
     src:url('/fonts/Rokh-SemiBold.woff') format('woff'),
-        url('/fonts/Rokh-SemiBold.woff2') format('woff2')
+        url('/fonts/Rokh-SemiBold.woff2') format('woff2'),
         url('/fonts/Rokh-SemiBold.eot') format('eot')
 }
 
 @font-face {
     font-family:'RokhFaBold';
     src:url('/fonts/Rokh-Bold.woff') format('woff'),
-        url('/fonts/Rokh-Bold.woff2') format('woff2')
+        url('/fonts/Rokh-Bold.woff2') format('woff2'),
         url('/fonts/Rokh-Bold.eot') format('eot')
+}
+
+/* ----IranNastaliq---- */
+
+@font-face {
+    font-family:'iranNastaliq';
+    src:url('/fonts/IranNastaliq.woff') format('woff'),
+        url('/fonts/IranNastaliq.woff2') format('woff2')
+}
+
+/* ----Allura---- */
+
+@font-face {
+    font-family:'allura';
+    src:url('/fonts/Allura-Regular.woff') format('woff'),
+        url('/fonts/Allura-Regular.woff') format('woff2')
+}
+/* ----Allura---- */
+
+@font-face {
+    font-family:'greatVibes';
+    src:url('/fonts/GreatVibes-Regular.woff') format('woff'),
+        url('/fonts/GreatVibes-Regular.woff2') format('woff2')
 }
 
 body{

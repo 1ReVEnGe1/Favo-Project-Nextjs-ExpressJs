@@ -36,7 +36,7 @@ const Slider = () => {
                             sizes="(max-width:1000px) 100%,(max-width:1000px) 100% "
                         />
                         <div className="slider-image-card">
-                            <h4>FavoEvent</h4>
+                            <h4>Favo Event</h4>
                             <div className="hyperText">
                                 <Link href="#">You Deserve To Shine</Link>
                             </div>
@@ -54,7 +54,7 @@ const Slider = () => {
                             sizes="(max-width:1000px) 100%,(max-width:1000px) 100% "
                         />
                         <div className="slider-image-card">
-                            <h4>FavoEvent</h4>
+                            <h4>Favo Event</h4>
                             <div className="hyperText">
                                 <Link href="#">Your Fantasy Your Story</Link>
                             </div>
@@ -73,7 +73,7 @@ const Slider = () => {
                             sizes="(max-width:1000px) 100%,(max-width:1000px) 100% "
                         />
                         <div className="slider-image-card">
-                            <h4>FavoEvent</h4>
+                            <h4>Favo Event</h4>
                             <div className="hyperText">
                                 <Link href="#">Dreams Have No Boundaries</Link>
                             </div>

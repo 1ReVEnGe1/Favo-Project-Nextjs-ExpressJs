@@ -28,18 +28,81 @@
 .page_top_container h1{
     color: #fff;
     font-size: 25px;
+    font-family: 'DanaFaMedium';
 }
 .breadcrumb{
     width: fit-content;
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 .breadcrumb li a {
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
 }
 .active_breadcrumb{
     color: #a6a182!important;
+}
+
+
+/* Responsive */
+@media only screen and (max-width : 1024px){
+    .page_top_container h1{
+        font-size: 20px;
+    }
+    .breadcrumb li a {
+        font-size: 13px;
+    }
+    .active_breadcrumb{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width : 855px){
+    .page_top_container{
+        width: 88%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width:1200px;
+    }
+    .page_top_container h1{
+        font-size: 24px;
+        text-align: center;
+    }
+    .breadcrumb li a {
+        font-size: 12px;
+    }
+    .active_breadcrumb{
+        font-size: 12px;
+    }
+   
+}
+
+@media only screen and (max-width : 640px){
+    .page_top_container h1{
+        font-size: 20px;
+    }
+    .breadcrumb li a {
+        font-size: 11px;
+    }
+    .active_breadcrumb{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width : 450px){
+    .page_top_container h1{
+        font-size: 18px;
+    }
+    .breadcrumb li a {
+        font-size: 11px;
+    }
+    .active_breadcrumb{
+        font-size: 11px;
+    }
 }

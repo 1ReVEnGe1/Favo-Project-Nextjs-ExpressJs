@@ -9,7 +9,7 @@ const PageTop = ({title , img , link}) => {
                 <div className="page_top_container">
                     <h1>{title}</h1>
                     <ul className="breadcrumb">
-                        <li><Link href={link} className="active_breadcrumb" >{title}</Link></li>
+                        <li className="active_breadcrumb">{title}</li>
                         <li><Link href="/">/ خانه</Link></li>
                     </ul>
                 </div>

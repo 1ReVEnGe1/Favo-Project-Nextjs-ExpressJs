@@ -47,10 +47,16 @@ const blogSchema = new mongoose.Schema({
             }
         }
     ],
-    slug:{
-        type:String,
-        required:[true , 'خنگ!!! ، آدرس URL یادت رفت. حتما هم انگلیسی بنویسیش'],
-        unique:[true , 'این URL از قبل موچوده']
+    slug: {
+        type: String,
+        required: [true, 'خنگ!!! ، آدرس URL یادت رفت. حتما هم انگلیسی بنویسیش'],
+        unique: [true, 'این URL از قبل موچوده']
+    },
+    keywords: {
+        type: String,
+        required: [true, 'کلمات کلیدی رو وارد نکردی مومن، بین 5 تا 8 کلمه وارد کن'],
+        maxLength: [255 , 'تعداد کاراکتر های بخش کلمات کلیدی نمیتونه بیشتر از 255 تا باشه'],
+        minLength: [5 , 'تعداد کاراکتر های بخش کلمات کلیدی باید بیشتر از 5 تا باشه']
     },
     createdAt: {
         type: Date,
