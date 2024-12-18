@@ -13,4 +13,7 @@ router.get('/blogs/latest' , blogController.getLatestblogs)
 
 router.get('/blog/:slug' , blogController.getBlog)
 
+//api/blogs/search
+router.get('/blogs/search' , blogController.searchedBlogs)
+
 module.exports = router

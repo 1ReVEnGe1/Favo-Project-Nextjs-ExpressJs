@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BlogService from "./BlogService";
+import SearchBox from "./SearchBox";
 
 
 
@@ -17,6 +18,7 @@ const BlogLeftbar = async ({ blogSlug }) => {
 
     return (
         <aside style={{ position: 'sticky', bottom: '10px' }} className=" w-4/12 rounded-3xl  " >
+            <SearchBox />
             <section className="py-3 px-4 rounded-xl" style={{ 'backgroundColor': 'rgb(26 34 45)' }} >
                 <span className="text-white">آخرین مطالب عروسی</span>
             </section>

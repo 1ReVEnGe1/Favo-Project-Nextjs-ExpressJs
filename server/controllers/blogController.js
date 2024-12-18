@@ -63,3 +63,21 @@ exports.getBlog = async (req, res) => {
         return res.status(500).json({ message: 'SERVER ERRORRRRRRRRR' })
     }
 }
+
+exports.searchedBlogs = async (req, res) => {
+    const { query, limit } = req.query;
+
+    if (!query) {
+        return res.status(400).json({ message: 'Query is Required' })
+    }
+
+    try {
+        const blogs = await Blog.find({ title: { $regex: query, $options:'i'} })
+            .limit(Number(limit) || 10);
+
+        return res.status(200).json(blogs);
+
+    } catch (error) {
+        return res.status(500).json({message:'Server Error HEY'})
+    }
+}
