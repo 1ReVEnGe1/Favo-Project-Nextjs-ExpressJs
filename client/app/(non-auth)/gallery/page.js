@@ -34,8 +34,8 @@ const Gallery = () => {
         <div style={{paddingTop:'100px'}}>
             
             <PageTop 
-                img={'/images/fingerfoods/فینگرفود تشریفاتی فاوو ایونت.webp'} 
-                title={'گالری فاوو ایونت'} 
+                img={'/images/Wedding Pics Gallery.webp'} 
+                title={'گالری خدمات عروسی فاوو ایونت'} 
                 link={'/gallery'}
             />
             
@@ -79,3 +79,6 @@ const Gallery = () => {
 }
 
 export default Gallery
+
+
+

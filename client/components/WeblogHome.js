@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const WeblogHome = ({ date, blogSlug, title, thumbnail, brief, number }) => {
-    const base_url = process.env.BASE_URL
+    const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
     
     return (
         <Link href={`/weblogs/${blogSlug}`} className={`weblog-home `}>

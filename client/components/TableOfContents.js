@@ -4,19 +4,18 @@ const TableOfContents = ({ headings }) => {
 
 
     return (
-        <div className={`mb-8  ${ styles['toc-cont']}`} style={{  border: '1px solid #323232', borderRadius: '12px', padding: '20px', }}>
-            <span className="text-white font-bold text-md">آنچه خواهید خواند</span>
+        <div className={`mb-8 block p-5 ${ styles['toc-cont']}`} >
+            <span className="text-white text-xs ">آنچه خواهید خواند</span>
             <hr style={{ borderColor: 'rgb(131 130 130)' }} className="mt-4" />
             <ul  className={`pt-4 ${styles['toc-ul']}`}>
                 {
                     headings.map((heading, index) => (
                         <li  key={index}  >
                             <a  
-                                className="text-sm underline block w-full" 
+                                className="underline block w-full underline-offset-4" 
                                 style={{ color: "#DBDBDB" }} 
                                 href={`#${heading.id}`}
                                 tabIndex={0}
-                                
                             >
                                 <span style={{color:'#E1D79A'}}> {index + 1}.</span>  {heading.text}
                             </a>

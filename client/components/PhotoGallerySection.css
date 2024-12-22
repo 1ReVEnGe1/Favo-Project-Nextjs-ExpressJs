@@ -1,0 +1,42 @@
+.modal-content{
+    width: 50%;
+    height: 80%;
+    max-width: 88%;
+    max-height: 88%;
+}
+.gallery-img-cont:hover{
+    box-shadow: 0 0 5px #a6a182,
+    0 0 25px #a6a182, 
+    0 0 50px #a6a182, 
+    0 0 100px #a6a182, 
+    0 0 200px #a6a182;
+}
+@media only screen and (min-width : 244px ){
+    .modal-content{
+        width: 80%;
+        height: 80%;
+        max-height: 80%;
+    }   
+}
+@media only screen and (min-width : 730px ){
+    .modal-content{
+        width: 80%;
+        height: 75%;
+        max-height: 75%;
+    }
+    .modal-content img{
+        width: fit-content;
+        height: fit-content;
+    }
+}
+@media only screen and (min-width : 1200px ){
+    .modal-content{
+        width: 60%;
+        height: 75%;
+        max-height: 75%;
+    }
+    .modal-content img{
+        width: fit-content;
+        height: fit-content;
+    }
+}

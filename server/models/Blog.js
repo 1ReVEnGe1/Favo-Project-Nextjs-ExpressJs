@@ -62,7 +62,20 @@ const blogSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    updatedAt: {
+        type: Date,
+        default: function(){
+            return this.createdAt
+        }
+    }
 
+})
+
+blogSchema.pre('save' , function(next){
+    if(!this.isNew){
+        this.updatedAt = Date.now()
+    }
+    next();
 })
 
 blogSchema.statics.postValidation = function (body) {

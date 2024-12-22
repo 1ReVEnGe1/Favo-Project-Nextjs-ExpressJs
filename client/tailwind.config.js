@@ -11,7 +11,7 @@ module.exports = {
         headerGray: 'rgb(27,27,27)',
         headerSubmenu:'#212121',
         primary:'#1B1B1B',
-        secondary:'#a6a182',
+        secondary:'#cbc5a1',
         lightYellow:'#cebf5f'
       }
     },

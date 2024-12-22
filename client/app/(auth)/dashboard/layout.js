@@ -7,16 +7,14 @@ import useAuthStore from '@/store/authStore';
 import { tokenVerifier } from '@/utils/tokenVerifier';
 import { getUser } from '@/utils/getUser';
 
+import { useRouter } from 'next/navigation';
 
 export default function DashLayout({ children }) {
     const [error, setError] = useState(null);
 
-    // const logout = useAuthStore((state) => state.logout)
-    // const loading = useAuthStore((state) => state.loading)
-    // const setLoading = useAuthStore((state) => state.setLoading)
-
     const { setUser, user, logout, loading, setLoading } = useAuthStore()
 
+    const router = useRouter()
     
     useEffect(() => {
         const tokenChecker = async () => {
@@ -24,7 +22,9 @@ export default function DashLayout({ children }) {
             const token = localStorage.getItem('token');
 
             if (!token) {
-                window.location.href = '/'
+                // window.location.href = '/'
+                // redirect('/')
+                router.push('/')
                 setLoading(false);
                 return
             }
@@ -35,6 +35,7 @@ export default function DashLayout({ children }) {
                 setError([{ message: 'توکن معتبر نیست' }]);
                 console.log('invalid token')
                 logout()
+                router.push('/')
                 setLoading(false);
             } else {
                 try {
@@ -52,8 +53,8 @@ export default function DashLayout({ children }) {
         tokenChecker()
     }, [setUser, setLoading , logout]);
 
-    if (loading) {
-        return <p>در حال بارگزاری</p>;
+    if (loading || !user) {
+        return <p className='text-white'>در حال بارگزاری</p>;
     }
 
 

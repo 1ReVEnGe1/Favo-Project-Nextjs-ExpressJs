@@ -73,7 +73,8 @@ exports.searchedBlogs = async (req, res) => {
 
     try {
         const blogs = await Blog.find({ title: { $regex: query, $options:'i'} })
-            .limit(Number(limit) || 10);
+            .limit(Number(limit) || 10)
+            .sort({createdAt: 'desc'})
 
         return res.status(200).json(blogs);
 

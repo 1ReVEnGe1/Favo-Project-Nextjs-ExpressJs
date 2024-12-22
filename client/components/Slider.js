@@ -8,7 +8,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 
-import styles  from './Slider.module.css'
+import styles from './Slider.module.css'
 import './Slider.css'
 
 
@@ -31,7 +31,7 @@ const Slider = () => {
                             fill
                             quality={100}
                             loading="lazy"
-                            style={{'objectFit':'cover'}}
+                            style={{ 'objectFit': 'cover' }}
                             alt="تشریفات عروسی فاوو ایونت"
                             sizes="(max-width:1000px) 100%,(max-width:1000px) 100% "
                         />
@@ -49,7 +49,7 @@ const Slider = () => {
                             fill
                             quality={100}
                             loading="lazy"
-                            style={{'objectFit':'cover'}}
+                            style={{ 'objectFit': 'cover' }}
                             alt="تشریفات عروسی"
                             sizes="(max-width:1000px) 100%,(max-width:1000px) 100% "
                         />
@@ -68,7 +68,7 @@ const Slider = () => {
                             fill
                             quality={100}
                             loading="lazy"
-                            style={{'objectFit':'cover'}}
+                            style={{ 'objectFit': 'cover' }}
                             alt="بهترین تشریفات عروسی تهران"
                             sizes="(max-width:1000px) 100%,(max-width:1000px) 100% "
                         />
@@ -82,6 +82,49 @@ const Slider = () => {
                 </Swiper>
             </div>
 
+            {/* No Script Tag For SEO */}
+            <noscript>
+                <div>
+                    <img
+                        src="/images/برگزاری عروسی.webp"
+                        alt="تشریفات عروسی فاوو ایونت"
+                        style={{width:'100%', height:'auto'}}
+                    />
+                    <div >
+                        <h4>Favo Event</h4>
+                        <div >
+                            <Link href="#">You Deserve To Shine</Link>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img
+                        src="/images/تشریفات عروسی فاوو ایونت.webp"
+                        alt="تشریفات عروسی"
+                        style={{width:'100%', height:'auto'}}
+                    />
+                    <div >
+                        <h4>Favo Event</h4>
+                        <div >
+                            <Link href="#">Your Fantasy Your Story</Link>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img
+                        src="/images/تشریفات عروسی.webp"
+                        alt="بهترین تشریفات عروسی تهران"
+                        style={{width:'100%', height:'auto'}}
+                    />
+                    <div >
+                        <h4>Favo Event</h4>
+                        <div >
+                            <Link href="#">Dreams Have No Boundaries</Link>
+                        </div>
+                    </div>
+                </div>
+
+            </noscript>
 
         </>
     )

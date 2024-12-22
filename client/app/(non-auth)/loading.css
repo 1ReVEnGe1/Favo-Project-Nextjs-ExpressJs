@@ -1,0 +1,95 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #141218;
+}
+
+.iconLoaderProgress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: rotateLoader;
+}
+
+.iconLoaderProgress svg {
+    stroke-width: 6px; /* ضخامت خطوط کمتر */
+    fill: none;
+    transform-origin: center;
+    z-index: 999;
+}
+
+.iconLoaderProgressFirst circle,
+.iconLoaderProgressSecond circle,
+.iconLoaderProgressFirst,
+.iconLoaderProgressSecond {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.iconLoaderProgressFirst circle,
+.iconLoaderProgressSecond circle {
+    animation-duration: 3s;
+    border-radius: 15px;
+}
+
+.iconLoaderProgressFirst,
+.iconLoaderProgressSecond {
+    position: absolute;
+    animation-duration: 6s;
+}
+
+.iconLoaderProgressFirst circle {
+    animation-name: circleFirst;
+    stroke-dasharray: 251, 251; /* متناسب با شعاع جدید */
+    stroke-dashoffset: 0;
+    stroke: #8f8a6e;
+    stroke-linecap: round;
+}
+
+.iconLoaderProgressSecond {
+    transform: rotate(-14deg);
+}
+
+.iconLoaderProgressSecond circle {
+    animation-name: circleSecond;
+    stroke-dasharray: 251, 251; /* متناسب با شعاع جدید */
+    stroke-dashoffset: 0;
+    stroke: #dfd9b4;
+    stroke-linecap: round;
+}
+
+@keyframes circleFirst {
+    from,
+    to {
+        stroke-dashoffset: 40;
+    }
+
+    50% {
+        stroke-dashoffset: 248;
+    }
+}
+
+@keyframes circleSecond {
+    from,
+    to {
+        stroke-dashoffset: -248;
+    }
+
+    50% {
+        stroke-dashoffset: -40;
+    }
+}
+
+@keyframes rotateLoader {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

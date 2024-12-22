@@ -8,7 +8,7 @@ const WeblogSection = async () => {
 
     const res = await fetch(`${base_url}/api/blogs/latest` , {next : {revalidate: 60}} )
     const blogs = await res.json()
-    console.log(blogs);
+    
     if (res.ok) {
         console.log(blogs);
     }

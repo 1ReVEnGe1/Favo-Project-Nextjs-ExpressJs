@@ -21,7 +21,7 @@ const Navbar = () => {
     const menuRef = useRef(null)
     const headerRef = useRef(null)
 
-    const { logout , isLoggedIn } = useAuthStore()
+    const { logout, isLoggedIn } = useAuthStore()
 
 
     const handleMobileMenu = () => {
@@ -131,23 +131,26 @@ const Navbar = () => {
             <header style={{ 'zIndex': '101' }} className="header bg-headerGray headerFavo" ref={headerRef}>
                 <div className="header-container">
                     <div className="header-right-part">
-                        <Bars3Icon onClick={handleMobileMenu} className="h-10 w-10 font-extrabold text-gray-400 fa-bars" />
+                        
+                        <svg onClick={handleMobileMenu} fill="#9ca3af" viewBox="-5 -4 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" className=" w-12 h-12 jam jam-bar-chart" transform="rotate(270)">
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M1 0a1 1 0 0 1 1 1v14a1 1 0 0 1-2 0V1a1 1 0 0 1 1-1zm12 4a1 1 0 0 1 1 1v10a1 1 0 0 1-2 0V5a1 1 0 0 1 1-1zM7 8a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V9a1 1 0 0 1 1-1z">
+
+                                </path>
+                            </g>
+                        </svg>
                     </div>
 
                     <nav className="main">
                         <ul className='main-nav'>
                             <Link href={'/'}><li className='text-white'>خانه</li></Link>
                             <Dropdown title="خدمات" items={NAVBAR_SERVICES} />
-                            <Link href={'/gallery'}><li className='text-white  '>گالری</li></Link>
-                            <Link href={'/menu'}><li className='text-white  '>منو ها</li></Link>
-                            <Link href={'/'}><li className='text-white  '>تماس با ما</li></Link>
-                            <Link href={'/weblogs'}><li className='text-white  '>وبلاگ</li></Link>
-                            {/* <Link href={'/register'}><li className='text-white  '>ثبت نام</li></Link>
-                            <Link href={'/login'}><li className='text-white  '>ورود</li></Link> */}
-                            {
-                                isLoggedIn && <button onClick={logout} ><li className='text-white  '>خروج</li></button>
-                            }  
-
+                            <Link href={'/gallery'}><li className='text-white '>گالری</li></Link>
+                            <Link href={'/menu'}><li className='text-white '>منو ها</li></Link>
+                            <Link href={'/'}><li className='text-white '>تماس با ما</li></Link>
+                            <Link href={'/weblogs'}><li className='text-white '>وبلاگ</li></Link>
                         </ul>
                     </nav>
                     <div className='logo'>

@@ -19,8 +19,8 @@ const Dropdown = ({ title, items }) => {
             <button className='flex justify-center items-center' >
                 <li className='text-white'>{title}</li>
                 {
-                    isOpen ? <ChevronDownIcon className='transition h-5 w-5 stroke-white text-white font-bold' /> :
-                    <ChevronLeftIcon className='h-5 w-5 stroke-white text-white font-bold' />
+                    isOpen ? <ChevronDownIcon className='transition w-4 h-4 md:h-5 md:w-5 stroke-white text-white font-bold ' /> :
+                    <ChevronLeftIcon className='w-4 h-4 md:h-5 md:w-5 stroke-white text-white font-bold' />
                 }
             </button>
             {

@@ -238,8 +238,8 @@ const EditPost = ({ params }) => {
                 <div>
 
                     {
-                        error && (Array.isArray(error.message)
-                            ? error.message.map((err, index) => (
+                        error && (Array.isArray(error.message.errors)
+                            ? error.message.errors.map((err, index) => (
                                 <p key={index} style={{ color: 'red' }}> {err} </p>
                             ))
                             : <p style={{ color: 'red' }}> {error.message} </p>)

@@ -1,0 +1,47 @@
+/* .weblog-blog-latest-card:hover{
+    box-shadow: 0 0 5px #a6a182,
+    0 0 25px #a6a182, 
+    0 0 50px #a6a182, 
+    0 0 100px #a6a182, 
+    0 0 200px #a6a182;
+} */
+.weblog-blog-latest-card h3 {
+    font-size: 13px;       
+}
+.weblog-blog-latest-card p {
+    font-size: 12px;       
+}
+.weblog-blog-latest-card:hover{
+    box-shadow: 0 0 5px #a6a182,
+    0 0 25px #a6a182
+
+}
+@media only screen and (min-width : 640px) {
+    .weblog-blog-latest-card h3 {
+        font-size: 11px;
+        font-family: 'DanaFaMedium';
+    }
+    .weblog-blog-latest-card p {
+        font-size: 10px;
+        line-height: 13px;       
+    }
+}
+@media only screen and (min-width : 768px) {
+    .weblog-blog-latest-card h3 {
+        font-size: 11px;
+    }
+    .weblog-blog-latest-card p {
+        font-size: 10px;
+        line-height: 13px;       
+    }
+}
+@media only screen and (min-width : 1280px) {
+    .weblog-blog-latest-card h3 {
+        font-size: 13px;
+    }
+    .weblog-blog-latest-card p {
+        font-size: 12px;
+        line-height: 18px;       
+    }
+}
+

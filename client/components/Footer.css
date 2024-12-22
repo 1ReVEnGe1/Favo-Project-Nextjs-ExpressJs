@@ -9,8 +9,12 @@
     display:flex;
     flex-direction:column;
     justify-content:center;
-    
+    font-family: "RokhFaBold";
 }
+.footer-favo-contact p{
+    color: #e6e6e6;
+}
+
 .footer-favo-contact span{
     display:block;
 }
@@ -20,11 +24,49 @@
     justify-content:end;
     align-items:center;
 }
+
 .footer-favo-title h2 {
-    transform:rotateZ(-90deg);
+    
     letter-spacing:8px;
     font-size:60px;
-    position:absolute;
-    left:-30%;
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
     font-weight:900;
+}
+.footer-favo-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+.footer-favo-socials a{
+    padding: 4px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-favo-socials a:hover{
+    box-shadow: 0 0 5px #a6a182,
+    0 0 25px #a6a182, 
+    0 0 50px #a6a182, 
+    0 0 100px #a6a182, 
+    0 0 200px #a6a182;
+    background-color: #a6a182;
+}
+.footer-favo-socials a:focus{
+    box-shadow: 0 0 5px #837f67,
+    0 0 25px #837f67, 
+    0 0 50px #837f67, 
+    0 0 100px #837f67, 
+    0 0 200px #837f67;
+    background-color: #837f67;
+    outline: none;
+}
+.footer-favo-socials a i{
+    font-size: 20px;
+    
 }

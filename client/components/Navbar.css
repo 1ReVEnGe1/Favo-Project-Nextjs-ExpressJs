@@ -44,7 +44,7 @@
 .header-right-part{
     width: 25%;
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -204,4 +204,51 @@
 .menuu-item-align{
     background-color:rgba(153, 153, 153, 0.1);
     transition: all 0.5s ease-out;
+}
+
+
+/* Responsive */
+@media only screen and (max-width : 1024px){
+    .main-nav {
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width : 768px){
+    .main-nav {
+        gap: 30px;
+    }
+    .main-nav a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 640px){
+    
+    .header-right-part{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    .main{
+        display: none;
+    }
+    .logo{
+        width: 60%;
+        justify-content: left;
+    }
+}
+
+@media only screen and (max-width : 480px){
+    
+    
+    .headerFavo{
+        height: 80px;
+    }
+    .logo img {
+        width: 80px!important;
+        height: 80px!important;
+    }
 }

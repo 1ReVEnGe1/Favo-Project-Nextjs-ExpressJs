@@ -1,7 +1,6 @@
 .page_top{
     width: 100%;
     height: 250px;
-    /* background-image: url('/images/fingerfoods/فینگرفود تشریفاتی فاوو ایونت.webp'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +42,7 @@
     color: white;
 }
 .active_breadcrumb{
-    color: #a6a182!important;
+    color: #cbc5a1;
 }
 
 

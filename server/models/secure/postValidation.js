@@ -11,7 +11,8 @@ exports.postSchema = Yup.object().shape({
         mimetype: Yup.mixed().oneOf(['image/jpeg', 'image/png', 'image/webp', 'image/jpg'], 'تنها فرمت های jpg , jpeg , png , webp مجاز به آپلود هستند')
 
     }),
-    brief:Yup.string(),
+    brief:Yup.string()
+        .required('بخش خلاصه مقاله یادت رفت حاجی'),
     content: Yup.string()
         .required('وبلاگ باید دارای محتوا باشد'),
     status: Yup.mixed().oneOf(['private', 'public'], 'یکی از 2 وضعیت خصوصی یا عمومی را انتخاب کنید'),

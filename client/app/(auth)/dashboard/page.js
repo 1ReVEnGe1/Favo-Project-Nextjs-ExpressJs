@@ -104,6 +104,7 @@ const Dashboard = () => {
                             <th>ردیف</th>
                             <th>عنوان وبلاگ</th>
                             <th>تاریخ انتشار</th>
+                            <th>تاریخ بروزرسانی</th>
                             <th>وضعیت</th>
                             <th> ویرایش / حذف</th>
                         </tr>
@@ -114,12 +115,13 @@ const Dashboard = () => {
                                 <tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>
-                                             
-                                        <Link style={{'textDecoration':'underLine'}} href={`/weblogs/${blog.slug}`}>
+
+                                        <Link style={{ 'textDecoration': 'underLine' }} href={`/weblogs/${blog.slug}`}>
                                             {blog.title.length > 100 ? blog.title.slice(0, 20) + '...' : blog.title}
                                         </Link>
                                     </td>
                                     <td>{formatDate(blog.createdAt)}</td>
+                                    <td>{blog.updatedAt === blog.createdAt ? formatDate(blog.createdAt) : <span className="text-secondary">بروزرسانی نشده است</span> }</td>
                                     <td>
                                         <button
                                             type="button"

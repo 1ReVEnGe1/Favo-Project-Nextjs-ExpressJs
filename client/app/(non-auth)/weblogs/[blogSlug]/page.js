@@ -187,8 +187,6 @@ export async function generateMetadata({ params }) {
 
 
 
-
-
 const SingleBlog = async ({ params }) => {
 
   const { blogSlug } = await params
@@ -209,35 +207,23 @@ const SingleBlog = async ({ params }) => {
 
     <>
 
-      <div style={{ 'marginTop': '150px', 'maxWidth': '1200px' }} className=" flex gap-4 mx-auto">
+      <div className=" single-blog-cont flex flex-col md:flex md:flex-row gap-4 md:gap-2 xl:gap-4 mx-3 md:mx-auto mt-28 md:mt-28  ">
 
         {/* main  */}
-        <main className="w-8/12 bg-headerSubmenu p-6 rounded-3xl">
+        <main className=" xl:p-8 w-full md:w-8/12 lg:w-8/12  xl:rounded-3xl rounded-xl lg:rounded-xl md:rounded-xl bg-headerSubmenu">
           <div
-            className={`w-full h-48 bg-cover bg-center rounded-xl relative mb-10`}
+            className={`w-full h-48 bg-cover bg-center rounded-xl relative mb-3 xl:mb-4 sm:mb-6 `}
             style={{ backgroundImage: `url(${base_url}${blog.thumbnail})` }}
           >
-            <div className=" flex justify-center flex-col items-center bg-black bg-opacity-70 absolute w-full h-full rounded-2xl ">
-              <h1
-                style={{
-                  'fontFamily': 'RokhFaBold',
-                  'fontSize': '22px',
-                  'lineHeight': '2.15rem'
-                }}
-                className=" p-4 rounded-2xl text-white font-bold"
-              >
+
+            <div className=" flex justify-center flex-col items-center bg-black bg-opacity-70 absolute w-full h-full rounded-2xl  p-4 ">
+              <h1 className="rounded-2xl text-white block max-w-md ">
                 {blog.title}
               </h1>
 
-              <ul className="breadcrumb">
-                <li><Link href="/"> خانه /</Link></li>
-                <li><Link href={`/weblogs`}> وبلاگ ها /</Link></li>
-                <li className="active_breadcrumb">{blog.title}</li>
-              </ul>
-
-              <div className="flex gap-1 publish-date">
+              <div className="publish-date ">
                 <CalendarIcon className={`w-3 text-white`} />
-                <span className="text-white text-sm">
+                <span className="text-white text-sm ">
                   {formatDate2(blog.createdAt)}
                 </span>
 
@@ -246,7 +232,11 @@ const SingleBlog = async ({ params }) => {
             </div>
           </div>
 
-
+          <ul className="breadcrumb mb-3 xl:mb-4 sm:mb-6 bg-slate-800  ">
+            <li><Link href="/"> خانه /</Link></li>
+            <li><Link href={`/weblogs`}> وبلاگ ها /</Link></li>
+            <li className="active_breadcrumb">{blog.title}</li>
+          </ul>
           {/* --------------Table Of Content-------------- */}
           <TableOfContents headings={headings} />
 
@@ -258,28 +248,23 @@ const SingleBlog = async ({ params }) => {
           />
 
           {/* --------------FAQ-------------- */}
-          <section>
+          <section className="faq">
             <hr className="my-8" style={{ borderColor: 'rgb(131 130 130)' }} />
-            <span className="text-white mb-3 text-lg font-bold mt-7 block">
+            <span className="text-white mb-3 mr-1 mt-7 block">
               سوالات شما
             </span>
             <ul >
               {
                 blog.faqs.map((item, index) => (
 
-                  <div style={{
-                    borderRadius: '12px',
-                    background: 'linear-gradient(to bottom, #212121, #2E2E2E)',
-                    padding: '20px',
-                    border: '1px solid #323232',
-                  }}
+                  <div
                     className={`${blog.faqs.length !== index + 1 ? 'mb-4' : ''}`}
                     key={index}
                   >
-                    <li style={{ color: 'rgb(216 247 255)' }}>
+                    <li className="faq-q" style={{ color: 'rgb(216 247 255)' }}>
                       {item.question}
                     </li>
-                    <li style={{ color: '#CACACA', fontSize: '13px' }} className="mt-3">
+                    <li style={{ color: '#CACACA' }} className="faq-a mt-3">
                       {item.answer}
                     </li>
                   </div>

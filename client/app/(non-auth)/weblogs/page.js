@@ -4,6 +4,7 @@ import WeblogHome from "@/components/WeblogHome"
 const Weblogs = async () => {
     const base_url = process.env.BASE_URL
     const res = await fetch(`${base_url}/api/blogs?page=1` , {next: {revalidate:60}})
+    
 
     if (!res.ok) {
         console.log('Error Fetching Blogs');
@@ -11,9 +12,9 @@ const Weblogs = async () => {
     }
 
     const data = await res.json()
-    console.log(data);
+    
     return (
-        <div style={{ 'paddingTop': '100px' }}>
+        <div style={{ 'paddingTop': '100px',minHeight:'100vh' }}>
             <PageTop
                 img='images/منو تشریفات عروسی.jpeg'
                 title={'وبلاگ های تشریفات عروسی فاووایونت'}

@@ -22,3 +22,20 @@
     margin-bottom:10px;
 }
 
+@media only screen and (max-width : 400px) {
+    .main-content h2{
+        font-size:16px;  
+    }
+    .main-content p{
+        font-size:12px;
+    }
+    .main-content ul{
+        list-style: square;
+        padding-right: 20px;
+    }
+    .main-content li{
+        font-size:12px;
+        margin-bottom: 8px;
+    }
+}
+
