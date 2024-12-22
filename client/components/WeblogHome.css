@@ -1,6 +1,5 @@
  .weblog-home{
     height:350px;
-    width:100%;
     position: relative;
 }
 .weblog-home-thumbnail{
@@ -72,4 +71,56 @@
     animation-duration: 1.8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+
+/* Responsive */
+@media only screen and (max-width:1024px){
+    .weblog-home{
+        height: 300px;
+        width: 100%;
+    }
+    .weblog-home-overlay {
+        padding: 10px;
+    }
+    .weblog-home-overlay .number{
+        font-size: 30px;
+    }
+    .weblog-home-overlay .date{
+        font-size: 10px;
+    }
+    .weblog-home-overlay .title{
+        margin-top: 12px;
+        line-height: 24px;
+        font-size: 19px;
+    }
+    .weblog-home-overlay .brief{
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .weblog-home-overlay .more-btn{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        
+    }
+    .weblog-home-overlay .CirclE{
+        border: 1px dashed #a6a182;
+        animation-name: circle;
+        animation-duration: 1.8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .weblog-home-overlay .LinE{
+        animation-name: line;
+        animation-duration: 2.1s;
+        animation-iteration-count: infinite;
+    }
+}
+@media only screen and (max-width:628px){
+    .weblog-home{
+        height: 300px;
+        width: 100%;
+    }
+    
 }

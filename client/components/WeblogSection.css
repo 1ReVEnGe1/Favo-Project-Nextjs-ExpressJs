@@ -1,8 +1,12 @@
-.weblog-home-section{
-
+.weblog-home-section-cont{
+    
     margin:0 auto 50px;
     max-width:1200px;
 }
-.weblog-home-section h2 {
+.weblog-home-section-cont h2 {
     font-family: 'RokhFaBold';
 }
+
+/* Responsive */
+
+

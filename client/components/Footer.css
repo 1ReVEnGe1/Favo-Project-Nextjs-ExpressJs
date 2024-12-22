@@ -4,6 +4,9 @@
     max-width:1200px;
     margin: 10px auto;
     border-radius:5px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 .footer-favo-contact{
     display:flex;
@@ -13,6 +16,8 @@
 }
 .footer-favo-contact p{
     color: #e6e6e6;
+    max-width: 220px;
+    word-spacing: 2px;
 }
 
 .footer-favo-contact span{
@@ -69,4 +74,34 @@
 .footer-favo-socials a i{
     font-size: 20px;
     
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 628px){
+    .footer-favo{
+        
+        height:auto;
+        max-width:1200px;
+        margin: 10px 0.725rem;
+        border-radius:5px;
+        flex-direction: column;
+        
+    }
+   
+    .footer-favo-title h2 {
+        letter-spacing:8px;
+        font-size:60px;
+        writing-mode: horizontal-tb;
+        transform: rotateZ(0);
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-weight:900;
+    }
+    .footer-favo-contact p{
+        max-width: 260px;
+        word-spacing: 2px;
+        
+    }
 }

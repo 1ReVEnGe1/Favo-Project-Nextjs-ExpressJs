@@ -8,7 +8,7 @@ const WeblogHome = ({ date, blogSlug, title, thumbnail, brief, number }) => {
     const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
     
     return (
-        <Link href={`/weblogs/${blogSlug}`} className={`weblog-home `}>
+        <Link href={`/weblogs/${blogSlug}`} className={`weblog-home w-full rounded-xl overflow-hidden `}>
             <Image
                 src={`${base_url}${thumbnail}`}
                 width={350}
@@ -20,7 +20,7 @@ const WeblogHome = ({ date, blogSlug, title, thumbnail, brief, number }) => {
                 }}
                 quality={100}
                 alt={title}
-                className='weblog-home-thumbnail'
+                className='weblog-home-thumbnail rounded-xl'
             />
             <div className={`weblog-home-overlay`}>
                 <span className='text-white number'>{number}</span><br />

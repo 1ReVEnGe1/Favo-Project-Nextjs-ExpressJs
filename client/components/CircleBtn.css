@@ -65,3 +65,15 @@
         -o-transform: rotate(360deg);
 }
 }
+
+@media only screen and (max-width : 1024px){
+    .CirclE{
+        position: relative;
+        width: 1.85rem;
+        height: 1.85rem;
+        border-radius:100% ;
+        display: inline-block;
+        border: 1px solid #a6a182;
+        
+    }
+}

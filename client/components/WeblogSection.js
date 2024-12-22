@@ -14,11 +14,11 @@ const WeblogSection = async () => {
     }
 
     return (
-        <div className="weblog-home-section">
+        <div className="weblog-home-section-cont lg:p-5 sm:p-3 p-3 ">
             <div>
                 <h2 className="mt-14 text-white text-4xl text-center ">آخرین وبلاگ ها</h2>
             </div>
-            <div className="flex gap-8 mt-8 justify-center ">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 xl:gap-8 lg:gap-5 sm:gap-3 mt-8 weblog-home-section">
                 {
                     blogs.map((blog, index) => (
                         <WeblogHome
