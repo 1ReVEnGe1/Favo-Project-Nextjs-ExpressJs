@@ -42,7 +42,7 @@ const LocationsHome = () => {
           stretch: 0,
           depth: 20,
           modifier: 2,
-          
+          slideShadows:false
 
         }}
 
@@ -67,8 +67,8 @@ const LocationsHome = () => {
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 0,
           },
           1024: {
             slidesPerView: 3,
