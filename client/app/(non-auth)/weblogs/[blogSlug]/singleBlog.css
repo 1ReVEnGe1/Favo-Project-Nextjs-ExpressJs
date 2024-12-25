@@ -1,5 +1,6 @@
 .single-blog-cont{
     max-width: 1200px;
+    position: relative;
 }
 .single-blog-cont main{
     padding: 24px;

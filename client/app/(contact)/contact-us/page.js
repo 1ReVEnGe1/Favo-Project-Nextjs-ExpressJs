@@ -31,7 +31,7 @@ const ContactUs = () => {
                         </Link>
                     </div>
                     <Link href={'/'}>
-                        <span className=" text-4xl text-secondary text-center block w-full mt-8 hover:text-lightYellow">
+                        <span className=" text-4xl text-lightYellow text-center block w-full mt-8 hover:text-secondary">
                             Back to Home <span className="text-white">&#10594;</span>
                         </span>
                     </Link>

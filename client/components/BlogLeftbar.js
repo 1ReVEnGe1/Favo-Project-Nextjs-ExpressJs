@@ -17,7 +17,7 @@ const BlogLeftbar = async ({ blogSlug }) => {
     const latest_blogs = await res.json()
 
     return (
-        <aside className="w-full xl:w-4/12 md:w-4/12 rounded-3xl md:sticky md:bottom-2.5 md:mx-0 mb-8" >
+        <aside className="w-full xl:w-4/12 md:w-4/12 rounded-3xl md:sticky md:top-3 md:mx-0 mb-8" >
 
             <SearchBox />
             <div className="sm:flex md:block gap-4 sm:gap-2">

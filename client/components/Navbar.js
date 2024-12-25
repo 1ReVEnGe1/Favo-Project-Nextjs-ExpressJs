@@ -159,7 +159,7 @@ const Navbar = () => {
                                 src={logo}
                                 width={200}
                                 height={100}
-                                style={{ 'width': 'auto', 'height': '70px' }}
+                                style={{ 'width': 'auto', 'height': '55px' }}
 
                                 alt='لوگو فاوو ایونت'
                                 placeholder='blur'

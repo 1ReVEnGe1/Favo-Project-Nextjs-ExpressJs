@@ -61,7 +61,7 @@
     text-align:left;
     font-family: 'greatVibes';
     font-size: 30px;
-    
+    text-shadow: 0 8px 8px BLACK;
   }
   
   .slider-image-card a {
@@ -73,6 +73,7 @@
     font-family: 'greatVibes';
     display: block;
     width: 100%;
+    text-shadow: 0 10px 10px BLACK;
   }
   
   .slider-image-card .hyperText {

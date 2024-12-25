@@ -197,7 +197,6 @@ const SingleBlog = async ({ params }) => {
     throw new Error("Failed to fetch blog data");
   }
   const blog = await res.json()
-  console.log(blog);
 
   const headings = extractHeadings(blog.content)
 

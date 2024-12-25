@@ -12,8 +12,8 @@ const TableOfContents = ({ headings }) => {
                     headings.map((heading, index) => (
                         <li  key={index}  >
                             <a  
-                                className="underline block w-full underline-offset-4" 
-                                style={{ color: "#DBDBDB" }} 
+                                className="underline block w-full underline-offset-4 text-gray-300 hover:text-secondary" 
+                                 
                                 href={`#${heading.id}`}
                                 tabIndex={0}
                             >

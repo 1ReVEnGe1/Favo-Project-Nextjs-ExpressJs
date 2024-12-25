@@ -130,9 +130,6 @@ export default function Home() {
       <BigTitle bigTitle='About' />
       <AboutHome />
       <WhyFavo />
-      <BigTitle bigTitle='Design' />
-      {/* <Design /> */}
-      <Design2 />
       <BigTitle bigTitle='Services' />
       <ServicesHome />
       <BigTitle bigTitle='Venues' />
