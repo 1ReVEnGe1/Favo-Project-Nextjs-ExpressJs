@@ -127,17 +127,17 @@ export default function Home() {
       
       <Slider />
       <Cards />
-      <BigTitle bigTitle='ABOUT' />
+      <BigTitle bigTitle='About' />
       <AboutHome />
       <WhyFavo />
-      <BigTitle bigTitle='DESIGN' />
+      <BigTitle bigTitle='Design' />
       {/* <Design /> */}
       <Design2 />
-      <BigTitle bigTitle='SERVICES' />
+      <BigTitle bigTitle='Services' />
       <ServicesHome />
-      <BigTitle bigTitle='LOCATIONS' />
+      <BigTitle bigTitle='Venues' />
       <LocationsHome />
-      <BigTitle bigTitle='WEBLOGS' />
+      <BigTitle bigTitle='Blogs' />
       <WeblogSection />
       
     </>
