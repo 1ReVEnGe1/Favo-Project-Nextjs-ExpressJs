@@ -149,7 +149,7 @@ const Navbar = () => {
                             <Dropdown title="خدمات" items={NAVBAR_SERVICES} />
                             <Link href={'/gallery'}><li className='text-white '>گالری</li></Link>
                             <Link href={'/menu'}><li className='text-white '>منو ها</li></Link>
-                            <Link href={'/'}><li className='text-white '>تماس با ما</li></Link>
+                            <Link href={'/contact-us'}><li className='text-white '>تماس با ما</li></Link>
                             <Link href={'/weblogs'}><li className='text-white '>وبلاگ</li></Link>
                         </ul>
                     </nav>

@@ -15,8 +15,8 @@ const CardServices = ({ src, title, description , index}) => {
                     sizes='any'
                 />
             </div>
-            <h3 className="text-white font-semibold text-xl mt-3 text-center">{title}</h3>
-            <p className="text-slate-100 text-sm mt-2 text-center ">{description}</p>
+            <h3 className="text-white font-semibold  mt-3 text-center">{title}</h3>
+            <p className="text-slate-300  mt-2 text-center ">{description}</p>
 
         </div>
     )

@@ -1,0 +1,126 @@
+.design-container{
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.container {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 80px;
+}
+
+.Div{
+    /* هر بخش نصف عرض صفحه را می‌گیرد */
+    height: 500px;
+    /* ارتفاع دلخواه */
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.leftDiv1 {
+    width: 20%;
+    background-position: left center;
+    background-image: url('/images/دیزاین جایگاه عروس و داماد.webp');
+    
+}
+.rightDiv1 {
+    width: 100%;
+    /* background-position: -160% center; */
+    background-position: -100px center;
+    background-image: url('/images/دیزاین جایگاه عروس و داماد.webp');
+    
+}
+.leftDiv2 {
+    width: 20%;
+    background-position: left center;
+    background-image: url('/images/decoration/چیدمان مراسم عروسی فاوو ایونت.webp');
+    
+}
+
+.rightDiv2 {
+    width: 100%;
+    /* background-position: -160% center; */
+    background-position: -100px center;
+    background-image: url('/images/decoration/چیدمان مراسم عروسی فاوو ایونت.webp');
+    
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width : 1280px){
+    .design-container{
+        max-width: 1000px;
+    }   
+    .Div{
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        
+    }   
+}
+@media only screen and (max-width : 1024px){
+    .design-container{
+        gap: 20px;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }   
+    .Div{
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+    }
+ 
+    .container {
+        gap: 12px
+    }
+}
+
+@media only screen and (max-width : 780px){
+    .design-container{
+        flex-direction: column;
+        gap:12px ;
+        padding: 0 12px;
+        margin: 40px auto;
+    }
+    
+    .container {
+        
+        margin-top: 0px;
+        
+    }
+    .leftDiv2 {
+        width: 100%;
+        background-position: left center;
+        background-image: url('/images/decoration/چیدمان مراسم عروسی فاوو ایونت.webp');
+        
+    }
+    
+    .rightDiv2 {
+        width: 20%;
+        background-position: -100px center;
+        background-image: url('/images/decoration/چیدمان مراسم عروسی فاوو ایونت.webp');
+        
+    }
+}
+@media only screen and (max-width : 400px){
+    .design-container{
+        flex-direction: column;
+        gap:12px ;
+        padding: 0 12px;
+    }
+    .Div{
+        height: 300px;
+    }
+    .container {
+        
+        margin-top: 0px;
+    }
+}

@@ -15,7 +15,7 @@ import './Slider.css'
 const Slider = () => {
     return (
         <>
-            <div className='bg-black pb-8 px-8 pt-20'>
+            <div className='bg-black pb-8 px-4 sm:px-8 pt-12 sm:pt-20'>
                 <Swiper
                     navigation={true}
                     modules={[Navigation, Autoplay]}
@@ -24,6 +24,7 @@ const Slider = () => {
                         delay: 3000,
                         disableOnInteraction: false
                     }}
+                    loop={true}
                 >
                     <SwiperSlide className={styles['swiper-slide']} >
                         <Image

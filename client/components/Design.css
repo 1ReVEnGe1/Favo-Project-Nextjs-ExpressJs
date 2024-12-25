@@ -3,7 +3,6 @@
     background-color: var(--grayDarkYellow);
     display: flex;
     justify-content: center;
-    /* overflow: hidden; */
 }
 
 .portfolio-container {
@@ -234,4 +233,66 @@
     color: #fff;
     font-size: 18px;
     font-family: 'RokhFaSemiBold';
+}
+
+@media only screen and (max-width: 1150px){
+    .portfolio-container {
+        width: 100%;
+        max-width: 1000px ;
+        justify-content: space-evenly;
+        margin: 0 auto;
+    }
+    .portfolio-right {
+        width: 50%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px){
+    .portfolio-container {
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        max-width: 768px;
+    }
+    .portfolio-right-top-img {
+        margin-bottom: 12px;
+        aspect-ratio: 3/2;
+        max-width: 340px;
+    }
+    .portfolio-right-bottom-img{
+        aspect-ratio: 3/3;
+        max-width: 340px;
+    }
+    .portfolio-left-img{
+        max-width: 340px;
+        height: 670px!important;
+    }
+    .portfolio-right {
+        width: 50%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 0px;
+    }
+    .portfolio-right-top {
+        margin-bottom: 12px;
+    }
+    .portfolio-left-img {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 700px;
+        position: relative;
+        padding-left: 12px;
+    }
+    
 }

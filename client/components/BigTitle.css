@@ -1,6 +1,6 @@
 .big-title {
     width:90%;
-    margin:0 auto;
+    margin:100px auto 10px;
     max-width:1200px;
     position:relative;
     height:200px
@@ -36,6 +36,10 @@
     .big-title span {
         font-size: 140px;
         letter-spacing: 10px;
+        
+    }
+    .big-title{
+        height: 150px;
     }
 }
 @media only screen and (max-width: 800px){
@@ -49,16 +53,25 @@
         font-size: 100px;
         letter-spacing: 6px;
     }
+    .big-title{
+        height: 100px;
+    }
 }
 @media only screen and (max-width: 550px){
     .big-title span {
         font-size: 80px;
+    }
+    .big-title{
+        height: 80px;
     }
 }
 @media only screen and (max-width: 480px){
     .big-title span {
         font-size: 60px;
         letter-spacing: 4px;
+    }
+    .big-title{
+        height: 70px;
     }
 }
 @media only screen and (max-width: 390px){

@@ -5,17 +5,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
     z-index: 4;
 }
 
 .about-read-more-btn a {
     width: 150px;
     height: 40px;
-    /* padding:0.75rem 2.9375rem ; */
-    /* background-color: #606368; */
     background-color: #a6a182fa;
-    /* background-color: #60636820; */
     border: 1px solid #606368;
     text-decoration: none;
     color: #fff;
@@ -29,6 +26,7 @@
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
+    font-size: 16px;
 }
 
 .about-read-more-btn a::before {
@@ -56,4 +54,37 @@
 
 .about-read-more-btn a:hover {
     background-color: #6063688f;
+}
+
+/* Responsive */
+@media only screen and (max-width:1280px){
+    .about-read-more-btn a{
+        font-size: 14px;
+        width: 130px;
+        height: 37px;
+    }
+    .about-read-more-btn a::before{
+        width: 130px;
+        height: 37px;
+    }
+    .about-read-more-btn {
+        margin-top: 20px;
+    }
+    
+}
+
+@media only screen and (max-width:1024px){
+    .about-read-more-btn a{
+        font-size: 13px;
+        width: 120px;
+        height: 35px;
+    }
+    .about-read-more-btn a::before{
+        width: 120px;
+        height: 35px;
+    }
+    .about-read-more-btn {
+        margin-top: 20px;
+    }
+    
 }

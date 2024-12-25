@@ -2,7 +2,7 @@ import Card from "./Card"
 import './Cards.css'
 const Cards = () => {
     return (
-        <div className="cards">
+        <div className="cards grid grid-cols-1 gap-3 sm:grid-cols-3 xl:gap-8 lg:gap-5 sm:gap-3 mt-8">
             <Card title={'لوکیشن مناسب مراسم عروسی'}>
                 <p>خدمات ویژه ی آیتم های خوراکی زیر نظر آشپزهای بین المللی و داخلی در محیطی کاملا بهداشتی و تحت نظارت وزارت بهداشت که باعث اطمینان و رضایت کارفرمایان عزیز میباشد</p>
             </Card>

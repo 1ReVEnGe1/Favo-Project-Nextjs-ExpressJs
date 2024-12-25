@@ -9,15 +9,15 @@ const WhyFavo = () => {
             <div className='why' >
                 <div className="why-favo">
                     <div className='flex flex-col justify-between why-favo-layer relative'>
-                        <svg className="why-favo-svg absolute top-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <svg className="why-favo-svg absolute -top-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
                             <path fill="#0F0F0F" style={{ height: 40 }} d="M262.1,5.3L1000,100V0H0v100L262.1,5.3z"></path>
                         </svg>
                         <div className='why-favo-layer-content'>
                             <div>
-                                <h2 className='text-white text-4xl text-center mt-12 font-extrabold'>چرا فاوو ایونت؟</h2>
+                                <h2 className='xl:text-4xl lg:text-3xl text-3xl mx-2 font-extrabold text-white text-center mt-12 '>چرا فاوو ایونت؟</h2>
                             </div>
-                            <div className='flex mt-12'>
-                                <div className=' w-1/2' >
+                            <div className='flex mt-12 why-favo-layer-content-2'>
+                                <div  >
                                     <IconBox title={'اجرای مراسم انحصاری'}>
                                         <p>فاوو ایونت ،با تکیه به تخصص خود در برگزاری انحصاری و خاص مراسم‌ ها به سبک‌های اروپایی و مجلل جز توانمندترین شرکت‌های شناخته شده در بین رقبای تجاری خود بوده و سابقه چندین اجرای موفق داخلی و بین‌المللی، مهر تایید خدمات خاص فاوو ایونت می‌باشد. سفارشی سازی اجرای منحصر به فرد تمامی آیتم‌ها، مناسب ایده و نظر شما میزبانان است.</p>
                                     </IconBox>
@@ -28,7 +28,7 @@ const WhyFavo = () => {
                                         <p>قدرت سرعت عمل و سازماندهی حرفه‌ای تیم فاو یکی از ویژگی‌هایی بوده که شما را از برنامه‌ریزی طولانی مدت و استرس نجات می‌دهد. مفتخریم که در کمترین زمان ممکن ؛ متنوع ترین و لوکس‌ترین خدمات تشریفات را برای شما اجرا خواهیم کرد.</p>
                                     </IconBox>
                                 </div>
-                                <div className=' w-1/2' >
+                                <div  >
                                     <IconBox title={'تنوع لوکیشن ها'} direction={'left'} >
                                         <p className='text-left'>ارائه خدمات تشریفاتی نامحدود در بیش از ۵۰ لوکیشن اعم از عمارت،روف گاردن ، باغ ، سالن ، تالار و حتی لوکیشن‌ های مخصوص شما عزیزان از ویژگی‌های فاوو ایونت می‌باشد. انتخاب مناسب ترین محیط اجرایی مراسم باعث اجرای هرچه بهتر مجالس شما شده و موجب تفاوت ویژه مابین مراسم شماو دیگر مجالس خواهد شد.</p>
                                     </IconBox>
@@ -41,7 +41,7 @@ const WhyFavo = () => {
                                 </div>
                             </div>
                         </div>
-                        <svg className="why-favo-svg absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <svg className="why-favo-svg absolute -bottom-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
                             <path fill="#0F0F0F" style={{ height: 80 }} d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z">
                             </path>
                         </svg>

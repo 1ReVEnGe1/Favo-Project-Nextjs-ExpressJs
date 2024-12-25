@@ -2,10 +2,68 @@
     margin: 0 auto;
     max-width:1200px;
     width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .about-home h2 {
     font-family: 'RokhFaBold';
 }
 .about-home p {
-    font-size: 15px;
+    font-size: 16px;
+}
+.about-home-items h3{
+    font-family: 'DanaFaMedium';
+    color: #fff;
+    font-size: 17px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1280px){
+    .about-home p {
+        font-size: 14px;
+    }
+    .about-home-items h3{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .about-home p {
+        font-size: 12px;
+    } 
+}
+
+
+@media only screen and (max-width: 628px){
+    .card h2{
+        font-size:19px;
+        margin-bottom: 15px;
+    }    
+    .card p{
+        font-size:14px;
+        
+    }    
+    .about-home{
+        margin: 0 auto;
+        max-width:1200px;
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column-reverse;
+    }
+}
+@media only screen and (max-width: 480px){
+    .card h2{
+        font-size:18px;
+        margin-bottom: 15px;
+    }    
+    .card p{
+        font-size:13px;
+        
+    }    
 }

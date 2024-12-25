@@ -69,7 +69,7 @@
     text-decoration: none;
     text-align: left;
     font-size: 35px;
-    
+    letter-spacing: 3px;
     font-family: 'greatVibes';
     display: block;
     width: 100%;
@@ -93,3 +93,126 @@
     background-color: #54595f;
     z-index: 10;
   }
+
+  /* Responsive  */
+
+
+
+@media (max-width: 1200px) {
+    .swiper {
+        height: 700px; /* برای صفحه‌نمایش‌های متوسط */
+    }
+    .slider-image-card {
+      top: 34%;
+      right: 50px;
+      padding: 23px;
+      width: 300px;
+    }
+    .slider-image-card a {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .swiper {
+        height: 600px; /* برای تبلت‌ها و صفحه‌نمایش‌های کوچک‌تر */
+    }
+    .slider-image-card {
+      top: 34%;
+      right: 50px;
+      padding: 18px;
+      width: 300px;
+    }
+    .slider-image-card a {
+      font-size: 24px;
+      
+    }
+    .slider-image-card .hyperText {
+      margin-bottom: 40px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .swiper {
+    height: 500px; 
+  }
+  .slider-image-card h4 {
+    font-size: 27px;
+}
+  .slider-image-card {
+    top: 34%;
+    right: 30px;
+    padding: 18px;
+    width: 250px;
+  }
+  .slider-image-card a {
+    font-size: 22px;
+    
+  }
+  .slider-image-card .hyperText {
+    margin-bottom: 20px;
+  }
+  .swiper-button-next{
+    width: 30px;
+    height: 30px;
+    right: 80px!important;
+  }
+  .swiper-button-next:after{
+    font-size: 26px;
+  }
+  .swiper-button-prev{
+    width: 30px;
+    height: 30px;
+    right: 40px!important;
+  }
+  .swiper-button-prev::after{
+    font-size: 26px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 400px; /* برای موبایل‌ها */
+  }
+  .slider-image-card h4 {
+    font-size: 20px;
+  }
+  .slider-image-card {
+    top: 37%;
+    right: 10px;
+    padding: 18px;
+    width: 180px;
+  }
+  .slider-image-card a {
+    font-size: 18px;    
+  }
+  .slider-image-card .hyperText a::before {  
+    height: 40px;
+  }
+  .slider-image-card .hyperText {
+    padding-top: 40px;  
+  }
+  .slider-image-card .hyperText {
+      margin-bottom: 5px;
+  }
+  .swiper-button-next{
+    width: 24px;
+    height: 24px;
+    right: 60px!important;
+  }
+  .swiper-button-next:after{
+    font-size: 22px;
+  }
+  .swiper-button-prev{
+    width: 24px;
+    height: 24px;
+    right: 25px!important;
+  }
+  .swiper-button-prev::after{
+    font-size: 22px;
+  }
+}

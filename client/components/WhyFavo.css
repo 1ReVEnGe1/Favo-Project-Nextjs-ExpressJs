@@ -21,6 +21,9 @@
     max-width:1200px;
     margin:50px auto;
 }
+.why-favo-layer-content-2 > div{
+    width: 50%;
+}
 
 .why-favo-svg{
     height: 50px;
@@ -29,7 +32,74 @@
 }
 .why-favo h2{
     font-family: 'RokhFaBold';
+    
 }
 .why-favo h3{
     font-family: 'RokhFaSemiBold';
+    color: #fff9d4fa;
+}
+.why-favo-layer-content p {
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1280px){
+    .why-favo-layer-content p {
+        font-size: 13px;
+    }   
+}
+@media only screen and (max-width: 920px){
+    .why-favo-layer-content-2 {
+        flex-direction: column;
+        max-width: 768px;
+        padding: 12px;
+    }
+    .icon-box{
+        width: 100%;
+        
+    }
+    .icon-box p{
+        margin-top:0.5rem;
+        height:120px;
+        font-size:15px;
+    }
+    .why-favo-layer-content-2 > div{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .why-favo-layer-content-2 {
+        
+        max-width: 650px;
+        padding: 12px;
+    }
+    .icon-box p{
+        
+        height:auto;
+        font-size:13px;
+    }
+    .why-favo h3{
+        font-size: 20px;
+    }
+    .why-favo-layer-content-2 > div{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 480px){
+    .why-favo-layer-content-2 {
+        padding: 12px;
+    }
+    .icon-box {
+        gap: 6px;
+    }
+    .icon-box p{
+        height:auto;
+        font-size:12px;
+        margin-top: 0;
+    }
+    .why-favo h3{
+        font-size: 18px;
+    }
+    .why-favo-layer-content-2 > div{
+        width: 100%;
+    }
 }

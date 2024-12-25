@@ -106,30 +106,6 @@ export const MOBILE_MENU_ITEMS = [
     },
 ]
 
-//Home Weblog titles
-export const LATEST_WEBLOG_DETAILS = [
-    {
-        number:'01',
-        title:'تفاوت تشریفات فاوو با تشریفات های پیمانکاری',
-        brief:'در این ارائه، به بررسی و مقایسه شیوه های متفاوت برگزاری مراسم عروسی و تشریفات مربوطه خواهیم پرداخت و ...',
-        date:'دی ماه 1403',
-
-    },
-    {
-        number:'02',
-        title:'تفاوت شام سلف سرویس با دیس پرس',
-        brief:'در این بخش، ما به بررسی تفاوت های اصلی بین پزیرابیی شام به صورت دیس پرس و سلف سرویس در میهمانی‌ها خواهیم پرداخت و ...',
-        date:'دی ماه 1403',
-
-    },
-    {
-        number:'03',
-        title:'تابلو ولکام و کارت ولکام',
-        brief:'خوش آمدگویی، نخستین برداشت میهمانان از مراسم شماست. اولین لحظات، تاثیر عمیقی بر تجربه کلی میهمانان دارند...',
-        date:'دی ماه 1403',
-
-    }
-]
 
 export const GALLERY = [
     {
@@ -497,5 +473,110 @@ export const GALLERY = [
             },
             
         ]
+    },
+]
+
+export const LOCATIONS = [
+    {
+        id:'1',
+        name:'عظیمیه کرج',
+        type:'عمارت',
+        mainPic:'/images/locations/emarat azimiye karaj/اجاره عمارت در کرج.jpeg'
+    },
+    {
+        id:'2',
+        name:'امیرکاشانی رودهن',
+        type:'عمارت',
+        mainPic:'/images/locations/emarat amir kashani rudhn/اجاره عمارت در تهران.jpeg'
+    },
+    {
+        id:'3',
+        name:'پیانو',
+        type:'عمارت',
+        mainPic:'/images/locations/emarat piano/اجاره عمارت در تهران.jpeg'
+    },
+    {
+        id:'4',
+        name:'سفید فشم',
+        type:'عمارت',
+        mainPic:'/images/locations/emarat sefid fashamd/اجاره عمارت سفید فشم.jpeg'
+    },
+    {
+        id:'5',
+        name:'سهیلیه کرج',
+        type:'عمارت',
+        mainPic:'/images/locations/emarat soheyliye karaj/اجاره عمارت در تهران.jpeg'
+    },
+    {
+        id:'6',
+        name:'وسترن',
+        type:'عمارت',
+        mainPic:'/images/locations/emarat western/اجاره عمارت برای عروسی.jpeg'
+    },
+    {
+        id:'7',
+        name:'اندرزگو',
+        type:'روف گاردن',
+        mainPic:'/images/locations/roofgarden andarzgoo/اجاره روف گاردن در تهران.jpeg'
+    },
+    {
+        id:'8',
+        name:'پردیس',
+        type:'روف گاردن',
+        mainPic:'/images/locations/roofgarden pardis/اجاره روفگاردن در تهران.jpeg'
+    },
+    {
+        id:'9',
+        name:'پاسداران',
+        type:'روف گاردن',
+        mainPic:'/images/locations/roofgarden pasdaran/روفگاردن تهران.jpeg'
+    },
+    {
+        id:'10',
+        name:'قدسیه ازگل',
+        type:'سالن تشریفاتی',
+        mainPic:'/images/locations/sallon aghdasie ozgol/اجاره سالن اجتماعات.jpeg'
+    },
+    {
+        id:'11',
+        name:'بام بومهن',
+        type:'سالن تشریفاتی',
+        mainPic:'/images/locations/sallon bam boomehen/اجاره سالن اجتماعات اطراف تهران.jpeg'
+    },
+    {
+        id:'12',
+        name:'دهکده المپیک',
+        type:'سالن تشریفاتی',
+        mainPic:'/images/locations/sallon dehkade olympic/سالن اجتماعات در تهران.jpeg'
+    },
+    {
+        id:'13',
+        name:'رودهن',
+        type:'باغ ویلا',
+        mainPic:'/images/locations/bagh vila rudehen/لوکیشن باغ ویلا رودهن.jpeg'
+    },
+    {
+        id:'14',
+        name:'بالای رودهن',
+        type:'باغ ویلا',
+        mainPic:'/images/locations/baghvilla balaye rudehen/باغ ویلا رودهن 2.jpeg'
+    },
+    {
+        id:'15',
+        name:'بومهن',
+        type:'باغ ویلا',
+        mainPic:'/images/locations/baghvilla bumehen/اجاره باغ ویلا بومهن.jpeg'
+    },
+    {
+        id:'16',
+        name:'جاجرود',
+        type:'باغ ویلا',
+        mainPic:'/images/locations/baghvilla jajrud/اجاره باغ ویلا جاجرود.jpeg'
+    },
+    {
+        id:'17',
+        name:'زعفرانیه کرج',
+        type:'باغ ویلا',
+        mainPic:'/images/locations/baghvilla zaferanie karaj/اجاره باغ ویلا زعفرانیه کرج.jpeg'
     },
 ]

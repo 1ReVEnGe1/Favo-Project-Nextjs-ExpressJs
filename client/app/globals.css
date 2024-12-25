@@ -33,6 +33,12 @@
     src:url('/fonts/KalamehWebFaNum-Black.woff') format('woff'),
         url('/fonts/KalamehWebFaNum-Black.woff2') format('woff2')
 }
+/* ----Peyda---- */
+@font-face {
+    font-family:'AliBaba';
+    src:url('/fonts/Alibaba-Regular.woff') format('woff'),
+        url('/fonts/Alibaba-Regular.woff2') format('woff2')
+}
 /* ----Dana---- */
 @font-face {
     font-family:'DanaFa';
@@ -97,7 +103,7 @@
 body{
     /* background-color:#1B1B1B; */
     background-color:#0f0f0f;
-    font-family:'DanaFa'
+    font-family:'AliBaba'
 }
 
 

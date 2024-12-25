@@ -7,6 +7,7 @@ import ServicesHome from "../../components/ServicesHome";
 import Slider from "../../components/Slider";
 import WhyFavo from "../../components/WhyFavo";
 import WeblogSection from "../../components/WeblogSection";
+import Design2 from "@/components/Design2";
 
 const base_url = process.env.BASE_URL
 
@@ -130,7 +131,8 @@ export default function Home() {
       <AboutHome />
       <WhyFavo />
       <BigTitle bigTitle='DESIGN' />
-      <Design />
+      {/* <Design /> */}
+      <Design2 />
       <BigTitle bigTitle='SERVICES' />
       <ServicesHome />
       <BigTitle bigTitle='LOCATIONS' />

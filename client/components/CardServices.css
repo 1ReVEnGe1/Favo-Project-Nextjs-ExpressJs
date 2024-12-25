@@ -24,3 +24,146 @@
     width:100%;
     height:100%;
 }
+
+/* Responsive */
+@media only screen and (max-width : 1280px){
+    .card-services{
+        width:280px;
+    }    
+    .card-services-container{
+        width:100%;
+        height:200px;
+        position:relative
+    }
+    .bold-card{
+        height:250px;
+    }
+    .bold-card2{
+        width:350px;
+    }
+}
+@media only screen and (max-width : 1024px){
+    .card-services{
+        width:200px;
+    }    
+    .card-services-container{
+        width:100%;
+        height:150px;
+        position:relative;
+    }
+    .bold-card{
+        height:220px;
+        width: 100%;
+    }
+    .bold-card2{
+        width:380px;
+    }
+    .card-services h3{
+        font-size: 15px;
+    }
+    .card-services p{
+        font-size: 11px;
+        
+    }
+    .bold-card2 h3{
+        font-size: 21px;
+    }
+    .bold-card2 p{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width : 857px){
+    .card-services{
+        width:300px;
+    }    
+    .card-services-container{
+        width:100%;
+        height:220px;
+        position:relative;
+    }
+    .bold-card{
+        height:220px;
+        width: 100%;
+    }
+    .bold-card2{
+        width:300px;
+    }
+    .card-services h3{
+        font-size: 19px;
+    }
+    .card-services p{
+        font-size: 13px;
+        
+    }
+    .bold-card2 h3{
+        font-size: 19px;
+        margin-top: 0.75rem;
+    }
+    .bold-card2 p{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width : 670px){
+    .card-services{
+        width:250px;
+    }    
+    .card-services-container{
+        width:100%;
+        height:200px;
+        position:relative;
+    }
+    .bold-card{
+        height:200px;
+        width: 100%;
+    }
+    .bold-card2{
+        width:250px;
+    }
+    .card-services h3{
+        font-size: 17px;
+    }
+    .card-services p{
+        font-size: 12px;
+        
+    }
+    .bold-card2 h3{
+        font-size: 17px;
+        margin-top: 0.75rem;
+    }
+    .bold-card2 p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width : 534px){
+    .card-services{
+        width:100%;
+        
+    }    
+    .card-services-container{
+        width:100%;
+        height:280px;
+        position:relative;
+    }
+    .bold-card{
+        height:200px;
+        width: 100%;
+    }
+    .bold-card2{
+        width:100%;
+    }
+    .card-services h3{
+        font-size: 17px;
+    }
+    .card-services p{
+        font-size: 12px;
+        
+    }
+    .bold-card2 h3{
+        font-size: 17px;
+        margin-top: 0.75rem;
+    }
+    .bold-card2 p{
+        font-size: 12px;
+    }
+}
+

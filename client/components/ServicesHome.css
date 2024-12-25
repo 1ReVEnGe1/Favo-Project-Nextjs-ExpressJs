@@ -11,6 +11,7 @@
 .services-home-head p {
     max-width:650px;
     margin: 30px auto;
+    line-height: 24px;
     
 }
 .services-home hr {
@@ -21,4 +22,21 @@
 .services-home-content{
     max-width:1200px;
     margin:0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Responsive */
+@media only screen and (max-width:1280px){
+    .services-home-content{
+        gap: 0.9rem;
+        padding: 0 24px;
+    }
+}
+@media only screen and (max-width:670px){
+    .services-home-content{
+        gap: 0.6rem;
+        padding: 0 12px;
+    }
 }

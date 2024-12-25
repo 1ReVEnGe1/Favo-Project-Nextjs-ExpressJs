@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer-favo " >
 
-            <div className="h-full flex flex-col justify-end w-full mt-8 sm:w-3/12">
+            <div className="h-full flex flex-col justify-center items-center w-full mt-8 sm:w-3/12 ">
                 <div className="flex justify-center items-center">
                     <Image
                         src={'/images/لوگو فاوو ایونت.webp'}
@@ -31,15 +31,15 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="h-full footer-favo-contact pr-0 mx-auto sm:pr-28 md:pr-32 lg:pr-40 xl:pr-52 w-full flex-col items-center sm:block text-center sm:w-6/12 ">
-                <span className="text-secondary mb-3 text-xl" >شماره تماس</span>
+            <div className="h-full footer-favo-contact pr-0 pt-8 mx-auto  w-full flex-col items-center sm:block text-center sm:w-6/12 ">
+                <span className="text-secondary mb-3 text-xl " >شماره تماس</span>
                 <div className=" flex flex-col ">
-                    <Link href='tel:09125348339' className="text-lg font-bold text-white tracking-widest hover:text-secondary text-right" style={{direction:'ltr'}} >0912 534 8339</Link>
-                    <Link href='tel:09129008011' className="text-lg font-bold text-white tracking-widest hover:text-secondary text-right" style={{direction:'ltr'}} >0912 900 8011</Link>
-                    <Link href='tel:02122605106' className="text-lg font-bold text-white tracking-widest hover:text-secondary text-right" style={{direction:'ltr'}} >021-22 60 5106</Link>
+                    <Link href='tel:09125348339' className="text-lg font-bold text-white tracking-widest hover:text-secondary text-center" style={{direction:'ltr'}} >0912 534 8339</Link>
+                    <Link href='tel:09129008011' className="text-lg font-bold text-white tracking-widest hover:text-secondary text-center" style={{direction:'ltr'}} >0912 900 8011</Link>
+                    <Link href='tel:02122605106' className="text-lg font-bold text-white tracking-widest hover:text-secondary text-center" style={{direction:'ltr'}} >021-22 60 5106</Link>
                 </div>
                 <span className="mt-4 text-secondary font-semibold text-xl">آدرس</span>
-                <p className="text-white mt-2">تهران، قیطریه، بزرگراه صدر به شرق، خ قلندری جنوبی ، بن بست دهم، پلاک 1، واحد 3</p>
+                <p className="text-white mt-2 mx-auto">تهران، قیطریه، بزرگراه صدر به شرق، خ قلندری جنوبی ، بن بست دهم، پلاک 1، واحد 3</p>
                 <span className="mt-4 text-secondary font-semibold text-xl">خدمات دیگر</span>
                 <div className="flex mt-2 flex-col ">
                     <Link href='https://yarandievent.com' className="text-white hover:text-secondary">برگزاری ایونت</Link>

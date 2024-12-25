@@ -3,78 +3,69 @@ import Image from 'next/image'
 
 import './AboutHome.css'
 
-
-
-
 import VideoKhazayi from './VideoKhazayi'
 
 
 const AboutHome = () => {
     return (
-        <div className="about-home flex items-center ">
-            <div className="w-3/5 flex-col ">
-                <div className='flex '>
-                    <h2 className='text-4xl mx-2 font-extrabold text-white ' >فاوو ایونت در یک نگاه</h2>
-                    
-                    <Image
-                        src='/images/icons/magnifier-glass-svgrepo-com.svg'
-                        width={48}
-                        height={48}
-                        className='-translate-y-1'
-                        alt='تشریفات عروسی'
-                    />
+        <div className="about-home  ">
+            <div className="mt-4 sm:mt-0 w-full  sm:w-3/5 flex-col ">
+                <div className='flex items-center '>
+                    <h2 className='xl:text-4xl lg:text-3xl text-2xl mx-2 font-extrabold text-white ' >فاوو ایونت در یک نگاه</h2>
+                    <svg fill="#a6a182fa" className='xl:w-14 w-12' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038ZM4.622,9.311a1,1,0,0,1,2,0A2.692,2.692,0,0,0,9.311,12a1,1,0,0,1,0,2A4.7,4.7,0,0,1,4.622,9.311Z"></path>
+                        </g>
+                    </svg>
                 </div>
                 <div>
-                    <p className=' mt-2 text-gray-100 '>مجموعه‌ای با سابقه درخشان و قدرتمند در زمینه برگزاری مراسمات تشریفاتی که با استفاده از تیم های متخصص خود مانند ،تیم طراحی ،تیم دکوراسیون ،تیم موسیقی،تیم پذیرایی کترینگ و ... ، فاوو ایونت را به بهترین گزینه برای انتخاب شما مخاطبان عزیز تبدیل کرده است.</p>
+                    <p className=' mt-2 text-gray-100  '>مجموعه‌ای با سابقه درخشان و قدرتمند در زمینه برگزاری مراسمات تشریفاتی که با استفاده از تیم های متخصص خود مانند ،تیم طراحی ،تیم دکوراسیون ،تیم موسیقی،تیم پذیرایی کترینگ و ... ، فاوو ایونت را به بهترین گزینه برای انتخاب شما مخاطبان عزیز تبدیل کرده است.</p>
                 </div>
-                <div className='flex justify-between mt-6'>
+                <div className='lg:flex lg:justify-between mt-6 '>
                     <div>
-                        <div className='flex gap-2 items-center'>
-                            {/* <HeartIcon className='w-9 text-white' /> */}
-                            <Image
-                                src='/images/icons/heart-pulse-2-svgrepo-com.svg'
-                                width={32}
-                                height={32}
-                                alt='تشریفات عروسی'
-                            />
-                            <h3 className='text-white font-bold'>برگزارکننده مراسم عروسی و سالگرد عروسی</h3>
+                        <div className='flex gap-2 items-center about-home-items'>
+                            <svg viewBox="0 0 24 24" className='w-8 sm:w-6 lg:w-7' fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M2.34594 11.2501C2.12458 10.5866 2 9.92019 2 9.26044C2 3.3495 7.50016 0.662637 12 5.49877C16.4998 0.662637 22 3.34931 22 9.2604C22 9.92017 21.8754 10.5866 21.6541 11.2501H18.6361L18.5241 11.25C17.9784 11.2491 17.4937 11.2483 17.0527 11.4447C16.6116 11.6411 16.2879 12.002 15.9233 12.4084L15.8485 12.4918L14.8192 13.6354C14.7426 13.7205 14.68 13.79 14.6247 13.8493C14.5723 13.7879 14.5128 13.7159 14.4401 13.6277L10.8889 9.32318C10.7493 9.15391 10.6 8.97281 10.454 8.8384C10.2839 8.68188 10.0325 8.50581 9.68096 8.4847C9.32945 8.46359 9.05875 8.60829 8.87115 8.74333C8.71006 8.8593 8.54016 9.02123 8.38136 9.17258L6.85172 10.6294C6.37995 11.0787 6.28151 11.1553 6.17854 11.1964C6.07557 11.2376 5.9515 11.2501 5.3 11.2501H2.34594Z" fill="#a6a182fa"></path>
+                                    <path d="M3.00441 12.7501C4.38539 15.312 6.93029 17.7142 8.96173 19.3707C10.2937 20.4569 10.9597 21 12 21C13.0403 21 13.7063 20.4569 15.0383 19.3707C17.0697 17.7142 19.6146 15.312 20.9956 12.7501H18.6361C17.9119 12.7501 17.7746 12.7652 17.6629 12.815C17.5513 12.8647 17.4481 12.9567 16.9634 13.4952L15.9086 14.6672C15.7507 14.8428 15.5839 15.0283 15.4235 15.1628C15.2384 15.318 14.9627 15.4921 14.5896 15.4841C14.2166 15.476 13.9488 15.2904 13.7704 15.1274C13.616 14.9862 13.4574 14.7938 13.3074 14.6118L9.75487 10.3057C9.68734 10.2239 9.63239 10.1573 9.5839 10.1005C9.52897 10.1511 9.46645 10.2106 9.38961 10.2838L7.81346 11.785C7.4575 12.125 7.14165 12.4267 6.73563 12.5892C6.32961 12.7516 5.89282 12.7509 5.40054 12.7502L3.00441 12.7501Z" fill="#a6a182fa"></path>
+                                </g>
+                            </svg>
+                            <h3 >برگزارکننده مراسم عروسی و سالگرد عروسی</h3>
                         </div>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <Image
-                                src='/images/icons/drink-svgrepo-com (3).svg'
-                                width={32}
-                                height={32}
-                                alt='تشریفات عروسی'
-                            />
-                            <h3 className='text-white font-bold'>برگزارکننده مهمانی های خصوصی</h3>
+                        <div className='flex gap-2 items-center mt-2 about-home-items'>
+
+                            <svg version="1.1" className='w-8 sm:w-6 lg:w-7' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xmlSpace="preserve" fill="#A39E7F">
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path className="stone_een" d="M2.854,5.854C2.539,5.539,2.762,5,3.207,5h20.086l2.756-2.756C26.029,2.164,26,2.086,26,2 c0-0.629,0.581-1.122,1.235-0.973c0.361,0.082,0.655,0.376,0.738,0.737C28.123,2.419,27.629,3,27,3 c-0.086,0-0.164-0.029-0.244-0.049L24.707,5h4.086c0.445,0,0.669,0.539,0.354,0.854L28,7h-6.768 c-0.409-0.288-0.837-0.438-1.279-0.438c-0.496,0-0.919,0.184-1.296,0.438H4L2.854,5.854z M18.148,10.914 c0.373,0.373,0.708,0.523,1.023,0.523c0.51,0,0.969-0.394,1.452-0.877c0.781-0.781,1.33-1.499,0.354-2.475 c-0.373-0.373-0.708-0.523-1.023-0.523c-0.51,0-0.969,0.394-1.452,0.877C17.721,9.22,17.172,9.938,18.148,10.914z M21.5,29h-5V18.5 L27,8h-4.82c0.915,1.5-0.338,2.757-0.849,3.268c-0.566,0.566-1.246,1.17-2.159,1.17c-0.48,0-0.943-0.178-1.384-0.518l-3.084,3.084 c-0.098,0.098-0.226,0.146-0.354,0.146s-0.256-0.049-0.354-0.146c-0.195-0.195-0.195-0.512,0-0.707l3.091-3.091 C16.081,9.836,16.935,8.645,17.535,8H5l10.5,10.5V29h-5c-0.276,0-0.5,0.224-0.5,0.5v0c0,0.276,0.224,0.5,0.5,0.5h11 c0.276,0,0.5-0.224,0.5-0.5v0C22,29.224,21.776,29,21.5,29z"></path>
+                                </g>
+                            </svg>
+                            <h3 >برگزارکننده مهمانی های خصوصی</h3>
                         </div>
                     </div>
 
                     <div>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <Image
-                                src='/images/icons/ring-svgrepo-com.svg'
-                                width={32}
-                                height={32}
-                                alt='تشریفات عروسی'
-                            />
-                            <h3 className='text-white font-bold'>برگزارکننده مراسم عقد و مراسم نامزدی</h3>
-                        </div>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <Image
-                                src='/images/icons/cake-2-svgrepo-com.svg'
-                                width={32}
-                                height={32}
-                                alt='تشریفات عروسی'
-                            />
-                            <h3 className='text-white font-bold'>برگزارکننده مراسم تولد کودک و بزرگسال</h3>
+                        <div className='flex gap-2 items-center mt-2 about-home-items'>
+                            <svg viewBox="0 0 24 24" className='w-8 sm:w-6 lg:w-7' fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M6.34326 3.68567C6.83159 3.19735 7.36734 2.78535 7.93569 2.44968C10.4352 0.97348 13.5651 0.97348 16.0645 2.44968C16.6329 2.78535 17.1686 3.19735 17.657 3.68567L12.0001 9.34253L6.34326 3.68567ZM12.0001 6.5141L9.4131 3.92709C11.0447 3.14768 12.9556 3.14768 14.5871 3.92709L12.0001 6.5141Z" fill="#A39E7F"></path>
+                                    <path d="M2 12.6576C2 9.52653 3.43899 6.73156 5.69172 4.89796L7.11528 6.32152C5.22043 7.78449 4 10.0785 4 12.6576C4 17.0759 7.58172 20.6576 12 20.6576C16.4183 20.6576 20 17.0759 20 12.6576C20 10.0785 18.7796 7.78451 16.8847 6.32154L18.3083 4.89798C20.561 6.73158 22 9.52654 22 12.6576C22 18.1804 17.5228 22.6576 12 22.6576C6.47715 22.6576 2 18.1804 2 12.6576Z" fill="#A39E7F"></path>
+                                </g>
+                            </svg>
+                            <h3 >برگزارکننده مراسم عقد و مراسم نامزدی</h3>
                         </div>
                     </div>
                 </div>
                 <Button1 bigTitle='بیشتر بدانید' />
             </div>
 
-            <div className="w-2/5 flex justify-center">
+            <div className="sm:w-2/5 w-full sm:flex sm:justify-center">
                 <VideoKhazayi />
             </div>
         </div>
