@@ -33,11 +33,11 @@ const SearchPage = () => {
     return (
 
         <div className="min-h-screen" style={{ 'paddingTop': '100px' }}>
-            <main className="mx-auto max-w-7xl mt-20 ">
-                <h1 style={{fontFamily:'RokhFaBold',fontSize:'30px'}} className="text-white ">
+            <main className="mx-auto max-w-[1200px] mt-20 ">
+                <h1 style={{fontFamily:'RokhFaBold'}} className="text-white xl:text-4xl sm:text-3xl text-2xl px-4">
                     نتایج جست و جو عبارت : " <span className="text-secondary">{query}</span> "
                 </h1>
-                <div className="grid grid-cols-3 gap-4 mt-10">
+                <div className="grid md:grid-cols-2 md:gap-8 md:p-8 sm:grid-cols-2 sm:gap-4 sm:p-4 p-4 gap-4 lg:grid-cols-3 md:grid-cold-2 lg:gap-3 xl:gap-4 mt-10">
 
                     {
                         resutls.map((blog, index) => (

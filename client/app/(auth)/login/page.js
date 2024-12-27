@@ -3,6 +3,7 @@ import useAuthStore from "@/store/authStore";
 import { useState } from "react"
 import ReCAPTCHA from "react-google-recaptcha";
 
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -23,7 +24,7 @@ const Login = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:8080/api/auth/login', {
+            const response = await fetch(`${base_url}/api/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password, remember, recaptchaToken })

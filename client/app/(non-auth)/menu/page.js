@@ -3,6 +3,7 @@
 import PageTop from "@/components/PageTop"
 import './menu.css'
 import Image from "next/image"
+import TitleH2 from "@/components/TitleH2"
 
 const Menu = () => {
 
@@ -17,11 +18,8 @@ const Menu = () => {
             <main className="menu-cont mx-auto py-8 px-1 lg:px-3" style={{ maxWidth: '1100px' }}>
 
                 {/* Wedding and aghd Menu */}
-                <section className="text-center text-white py-4">
-                    <h2 >
-                        <span className=" inline-block border-b-4 border-secondary ">منو </span> های عروسی و عقد
-                    </h2>
-                </section>
+                <TitleH2 text='های عروسی و عقد' boldText='منو' />
+
 
                 <section className="bg-headerSubmenu text-sm mt-6 text-center text-white py-6 px-4 rounded-2xl m-4 sm:mx-2">
                     <span
@@ -920,11 +918,11 @@ const Menu = () => {
                 {/* ---------------------------------------------------------- */}
 
                 {/* Bale borun and namzadi Menu */}
-                <section className="text-center text-white py-4 mt-8">
-                    <h2 className="mt-14" >
-                        <span className=" inline-block border-b-4 border-secondary ">منو </span> های بله برون و نامزدی
-                    </h2>
-                </section>
+                <div className="mt-20">
+                    <TitleH2 text='های بله برون و نامزدی' boldText='منو' />
+
+                </div>
+
 
                 <section className="menu-favo-parent grid grid-cols-1 sm:grid-cols-2 lg:gap-5 gap-4 sm:gap-2 mt-4 px-4 sm:px-2">
 

@@ -11,7 +11,7 @@ const SignUp = () => {
     const [error, setError] = useState(null);
     const router = useRouter();
 
-
+    const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
 
     const handleSignUp = async (e) => {
         e.preventDefault()
@@ -22,7 +22,7 @@ const SignUp = () => {
         }
 
         try {
-            const res = await fetch('http://localhost:8080/api/auth/register', {
+            const res = await fetch(`${base_url}/api/auth/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ exports.getBlogs = async (req, res) => {
     const blogPerPage = 6
     try {
         const numberOfAllBlogs = await Blog.find({ status: 'public' }).countDocuments();
-
+        
         const blogs = await Blog.find({ status: 'public' })
             .populate('user')
             .sort({ createdAt: 'desc' })
@@ -20,7 +20,7 @@ exports.getBlogs = async (req, res) => {
             nextPage: page + 1,
             prevPage: page - 1,
             lastPage: Math.ceil(numberOfAllBlogs / blogPerPage),
-            hasNextPage: page + 1 === Math.ceil(numberOfAllBlogs / blogPerPage),
+            hasNextPage: (page + 1) <= Math.ceil(numberOfAllBlogs / blogPerPage),
             hasPrevPage: page > 1
         })
     } catch (error) {
