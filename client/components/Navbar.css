@@ -257,4 +257,21 @@
         width: 80px!important;
         height: 80px!important;
     }
+    .mobile-menuu{
+        width:270px;
+    }
+    .mobile-menuu-top {
+        height: 200px;
+    }
+    .mobile-menuu-top a {
+        width: 100px;
+        margin-top: 16px;
+        
+    }
+    .mobile-menuu-items li a {
+        font-size: 0.9rem;
+    }
+    .mobile-menuu-items button {
+        font-size: 0.9rem;
+    }
 }

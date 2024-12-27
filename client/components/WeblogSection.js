@@ -4,7 +4,7 @@ import './WeblogSection.css'
 
 
 const WeblogSection = async () => {
-    const base_url = process.env.BASE_URL
+    const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
 
     const res = await fetch(`${base_url}/api/blogs/latest` , {next : {revalidate: 60}} )
     const blogs = await res.json()

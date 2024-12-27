@@ -98,34 +98,34 @@ export const MOBILE_MENU_ITEMS = [
         subMenu: [
             {
                 title: 'دیزاین مراسم',
-                link: '/'
+                link: '/services'
             },
             {
                 title: 'گل آرایی مراسم',
-                link: '/'
+                link: '/services'
             },
             {
                 title: 'خلاقیت و تولید محتوا',
-                link: '/'
+                link: '/services'
             },
 
         ]
     },
     {
         title: 'گالری',
-        link: '/'
+        link: '/gallery'
     },
     {
         title: 'منوها',
-        link: '/'
+        link: '/menu'
     },
     {
         title: 'تماس با ما',
-        link: '/'
+        link: '/contact-us'
     },
     {
         title: 'وبلاگ',
-        link: '/'
+        link: '/weblogs'
     },
 ]
 

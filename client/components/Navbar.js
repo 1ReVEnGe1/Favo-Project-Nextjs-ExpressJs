@@ -6,11 +6,11 @@ import Dropdown from './Dropdown';
 import { NAVBAR_SERVICES } from '@/database/db';
 import { MOBILE_MENU_ITEMS } from '@/database/db';
 
-import { Bars3Icon, ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import useAuthStore from '@/store/authStore';
+
 
 
 
@@ -21,16 +21,21 @@ const Navbar = () => {
     const menuRef = useRef(null)
     const headerRef = useRef(null)
 
-    const { logout, isLoggedIn } = useAuthStore()
 
 
     const handleMobileMenu = () => {
         setIsOpenMobileMenu(prev => !isOpenMobileMenu)
     }
 
-    const handleCloseMobileMenu = () => {
+    const handleCloseMobileMenu = (e) => {
+        e.preventDefault();
         setIsOpenMobileMenu(prev => false)
         setIsOpenSubmenu(prev => false)
+    }
+
+    const closeMobileMenu = ()=> {
+        setIsOpenMobileMenu(false);
+        setIsOpenSubmenu(false)
     }
 
     const handleClickOutside = (e) => {
@@ -102,7 +107,7 @@ const Navbar = () => {
                         <li key={index} in={index} className={` cursor-pointer w-full bg-transparent flex flex-col items-center justify-center`}   >
                             {
                                 item.link ? (
-                                    <Link href={item.link} className='text-xl w-full text-center hover:bg-secondary'  >{item.title}</Link>
+                                    <Link  href={item.link} onClick={closeMobileMenu} className='text-xl w-full text-center hover:bg-secondary'  >{item.title}</Link>
                                 ) : (
                                     <div onClick={() => setIsOpenSubmenu(prev => !isOpenSubmenu)} className='hover:bg-slate-700 relative w-full flex justify-center ' >
                                         <div className='menuu-item-align absolute right-0 w-10 h-full flex justify-center text-secondary ' >

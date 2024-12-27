@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { formatDate } from "@/utils/jalali";
 import Link from "next/link";
 
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
 
 const Dashboard = () => {
     const [blogs, setBlogs] = useState([]);
@@ -12,7 +13,7 @@ const Dashboard = () => {
 
         const fetchBlogs = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/dashboard/blogs', {
+                const response = await fetch(`${base_url}/api/dashboard/blogs`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -42,7 +43,7 @@ const Dashboard = () => {
     //Delete Blog
     const handleDeleteBlog = async (blogId) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/dashboard/blogs/${blogId}`, {
+            const response = await fetch(`${base_url}/api/dashboard/blogs/${blogId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -64,7 +65,7 @@ const Dashboard = () => {
     //Change BLog Status
     const handleBlogStatus = async (blogId) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/dashboard/blogs/${blogId}`, {
+            const response = await fetch(`${base_url}/api/dashboard/blogs/${blogId}`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`

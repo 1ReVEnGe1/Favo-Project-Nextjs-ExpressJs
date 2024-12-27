@@ -1,7 +1,9 @@
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
+
 export const getUser = async (token) => {
     try {
 
-        const response = await fetch('http://localhost:8080/api/auth/get-user', {
+        const response = await fetch(`${base_url}/api/auth/get-user`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`, // ارسال توکن در هدر درخواست

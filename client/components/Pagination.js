@@ -4,10 +4,6 @@ import styles from './Pagination.module.css'
 
 const Pagination = ({ data, currentPage }) => {
 
-    
-    
-    
-
     return (
         <div className={styles.pagination}>
             {//First Page

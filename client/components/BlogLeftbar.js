@@ -4,9 +4,9 @@ import BlogService from "./BlogService";
 import SearchBox from "./SearchBox";
 import './BlogLeftbar.css'
 
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
 
 const BlogLeftbar = async ({ blogSlug }) => {
-    const base_url = process.env.BASE_URL
 
     const res = await fetch(`${base_url}/api/blogs/latest?excludeSlug=${blogSlug}`);
     if (!res.ok) {

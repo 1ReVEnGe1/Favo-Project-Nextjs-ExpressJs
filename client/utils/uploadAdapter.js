@@ -1,3 +1,5 @@
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_FRONT
+
 export default class UploadAdapter {
     constructor(loader){
         this.loader = loader
@@ -9,7 +11,7 @@ export default class UploadAdapter {
                 const formData = new FormData();
                 formData.append('file' , file);
 
-                fetch('http://localhost:8080/api/dashboard/upload-image' , {
+                fetch(`${base_url}/api/dashboard/upload-image` , {
                     method:'POST',
                     headers:{
                         'Authorization' : `Bearer ${localStorage.getItem('token')}`
