@@ -4,6 +4,7 @@ const User = require('../models/User');
 //External Modules
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { sendMail } = require('../utils-server/mailer');
 
 exports.createUser = async (req, res) => {
     const errors = []
@@ -28,6 +29,9 @@ exports.createUser = async (req, res) => {
             email,
             password
         })
+
+        //Send Welcome Email 
+        sendMail(email , fullname,'خوش آمدی ' , 'خیلی خوشحالم ادمین جدید فاوو')
 
 
         res.status(200).json({
