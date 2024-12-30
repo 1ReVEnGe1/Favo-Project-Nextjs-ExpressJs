@@ -143,7 +143,7 @@ exports.verifyUser = async (req, res) => {
 }
 
 exports.getUser = (req, res) => {
-
+    console.log(req);
     res.json({
         userId: req.user._id,
         fullname: req.user.fullname,
