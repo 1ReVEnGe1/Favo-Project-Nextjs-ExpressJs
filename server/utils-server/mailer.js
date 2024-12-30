@@ -3,12 +3,12 @@ const smtpTransport = require('nodemailer-smtp-transport');
 
 
 const transporterDetails = smtpTransport({
-    host:'mail.cv-me10.ir',
-    port:465,
+    host:process.env.EMAIL_HOST,
+    port:process.env.EMAIL_PORT,
     secure:true,
     auth: {
-        user:'heart@cv-me10.ir',
-        pass:"Amirreza10@"
+        user:process.env.EMAIL_USER,
+        pass:process.env.EMAIL_PASS
     },
     tls:{
         rejectUnauthorized: false
@@ -18,7 +18,7 @@ const transporterDetails = smtpTransport({
 exports.sendMail = (email , fullname , subject , message) => {
     const transporter = nodemailer.createTransport(transporterDetails);
     transporter.sendMail({
-        from:'heart@cv-me10.ir',
+        from:process.env.EMAIL_FROM,
         to:email,
         subject,
         html: `<h1> Hi ${fullname}</h1>

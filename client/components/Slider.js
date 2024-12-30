@@ -86,9 +86,11 @@ const Slider = () => {
             {/* No Script Tag For SEO */}
             <noscript>
                 <div>
-                    <img
+                    <Image
                         src="/images/برگزاری عروسی.webp"
                         alt="تشریفات عروسی فاوو ایونت"
+                        width={200}
+                        height={200}
                         style={{width:'100%', height:'auto'}}
                     />
                     <div >
@@ -99,9 +101,11 @@ const Slider = () => {
                     </div>
                 </div>
                 <div>
-                    <img
+                    <Image
                         src="/images/تشریفات عروسی فاوو ایونت.webp"
                         alt="تشریفات عروسی"
+                        width={200}
+                        height={200}
                         style={{width:'100%', height:'auto'}}
                     />
                     <div >
@@ -112,9 +116,11 @@ const Slider = () => {
                     </div>
                 </div>
                 <div>
-                    <img
+                    <Image
                         src="/images/تشریفات عروسی.webp"
                         alt="بهترین تشریفات عروسی تهران"
+                        width={200}
+                        height={200}
                         style={{width:'100%', height:'auto'}}
                     />
                     <div >

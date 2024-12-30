@@ -51,7 +51,7 @@ export default function DashLayout({ children }) {
 
         }
         tokenChecker()
-    }, [setUser, setLoading , logout]);
+    }, [setUser, setLoading , logout, router]);
 
     if (loading || !user) {
         return <p className='text-white'>در حال بارگزاری</p>;

@@ -48,7 +48,7 @@ const SearchBox = () => {
                 setBlogs([])
             }
         }, 1000)
-        , []);
+        , [fetchSearchedBlogs]);
 
 
     const handleSearch = (e) => {
